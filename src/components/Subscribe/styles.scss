@@ -2,8 +2,9 @@
     &__full {
         background-image: url('/waves.png'), linear-gradient(138deg, #FBAB34 0%, #AD721A 100%);
         background-repeat: no-repeat;
+        background-size: cover;
         background-position-x: center;
-        background-position-y: bottom;
+        background-position-y: top;
     }
 
     &__container {

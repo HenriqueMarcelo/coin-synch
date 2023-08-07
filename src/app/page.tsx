@@ -6,11 +6,13 @@ import { HomeInfos } from '@/components/HomeInfos'
 import { TopCryptos } from '@/components/TopCryptos'
 import { Subscribe } from '@/components/Subscribe'
 import { Footer } from '@/components/Footer'
+import { Banner } from '@/components/Banner'
 
 export default function Home() {
   return (
     <main>
       <Header />
+      <Banner />
       <Image src={WavesPng} alt="" className="waves__image" />
       <HomeInfos />
       <TopCryptos />
