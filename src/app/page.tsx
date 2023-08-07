@@ -5,6 +5,7 @@ import './page.scss'
 import { HomeInfos } from '@/components/HomeInfos'
 import { TopCryptos } from '@/components/TopCryptos'
 import { Subscribe } from '@/components/Subscribe'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeInfos />
       <TopCryptos />
       <Subscribe />
+      <Footer />
     </main>
   )
 }
