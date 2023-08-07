@@ -1,0 +1,120 @@
+.infos {
+    &__full {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
+        padding: 120px 0 130px;
+    }
+    &__container {
+        display: flex;
+        gap: 32px;
+    }
+    &__small {
+        color: var(--yellow-500);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    &__title {
+        color: var(--text-base, #5D6670);
+        
+        font-family: Roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; 
+        letter-spacing: -0.4px;
+
+        margin-bottom: 16px;
+    }
+    &__text {
+        color: var(--text-base, #5D6670);
+
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+
+        margin-bottom: 40px;
+    }
+    &__button {
+        display: flex;
+        width: 176px;
+        height: 48px;
+        padding: 14px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 32px;
+        background: var(--yellow-500, #FBAB34);
+        
+        
+        color: #FFF;
+        font-size: 16px;
+        text-align: center;
+        
+        &:hover {
+            background-color: var(--yellow-600);
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 32px;
+
+        &--top{
+            // justify-content: flex-start;
+            margin-bottom: 32px;
+            padding-right: 132px;
+        }
+        &--bottom{
+            padding-left: 132px;
+            justify-content: flex-end;
+
+        }
+    }
+}
+
+.info {
+    &__container {
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    &__image {
+        margin-bottom: 16px;
+        user-select: none;
+    }
+    &__small {
+        color: var(--yellow-500);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    &__title {
+        color: var(--text-base, #5D6670);
+        
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+
+        margin-bottom: 8px;
+    }
+    &__text {
+        color: var(--text-base, #5D6670);
+
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}

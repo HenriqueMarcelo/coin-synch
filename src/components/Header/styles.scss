@@ -1,7 +1,9 @@
-.Header{
+.header{
     &__container {
         display: flex;
         justify-content: space-between;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
     &__left {
         display: flex;
