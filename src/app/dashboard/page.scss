@@ -1,6 +1,9 @@
 .Dashboard {
     &_container {
         background: lime;
-        color: red;    
+        color: red;
+        div div {
+            background-color: blue;
+        }
     }
 }
