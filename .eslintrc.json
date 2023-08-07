@@ -6,6 +6,7 @@
     "@next/next/no-img-element": 0,
     "no-unused-vars": 1,
     "prettier/prettier": 1,
+    "jsx-a11y/alt-text": 0,
     "prefer-template": 1
   }
 }

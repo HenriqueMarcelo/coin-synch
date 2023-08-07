@@ -1,0 +1,35 @@
+.Header{
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    &__links {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+    &__link {
+        color: var(--text-base);
+        font-size: 14px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__button {
+        background-color: var(--yellow-500);
+        color: white;
+        font-size: 14px;
+        padding: 8px 26px;
+        border-radius: 100px;
+
+        &:hover {
+            background-color: var(--yellow-600);
+        }
+    }
+}
