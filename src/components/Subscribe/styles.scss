@@ -1,0 +1,97 @@
+.subscribe{
+    &__full {
+        background-image: url('/waves.png'), linear-gradient(138deg, #FBAB34 0%, #AD721A 100%);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+    }
+
+    &__container {
+        display: flex;
+        padding: 120px 100px;
+        gap: 240px;
+    }
+
+    &__small {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    &__title {
+        color: white;
+        
+        font-family: Roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; 
+        letter-spacing: -0.4px;
+
+        margin-bottom: 16px;
+    }
+    &__text {
+        color: white;
+
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    &__label {
+        color: #FFF;
+        /* Regular/label */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+    }
+
+    &__input {
+        width: 384px;
+        height: 48px;
+        flex-shrink: 0;
+
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.10);
+
+        color: var(--secondary-400, #ACABB7);
+        /* Regular/body */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+
+        border: none;
+        padding: 16px;
+        margin-top: 12px;
+        margin-bottom: 21px;
+    }
+
+    &__button {
+        display: flex;
+        width: 384px;
+        height: 48px;
+        padding: 14px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+
+        border-radius: 32px;
+        background: var(--yellow-500, #FBAB34);
+        box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.10);
+
+        color: #FFF;
+        font-size: 16px;
+
+        &:hover {
+            background: var(--yellow-400, #FBAB34);
+        }
+    }
+}
