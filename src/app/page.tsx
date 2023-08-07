@@ -3,6 +3,7 @@ import Image from 'next/image'
 import WavesPng from '@/assets/waves.png'
 import './page.scss'
 import { HomeInfos } from '@/components/HomeInfos'
+import { TopCryptos } from '@/components/TopCryptos'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Image src={WavesPng} alt="" className="waves__image" />
       <HomeInfos />
+      <TopCryptos />
     </main>
   )
 }

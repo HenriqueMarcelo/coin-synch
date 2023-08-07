@@ -73,4 +73,5 @@ button {
   border: none;
   cursor: pointer;
   transition: 0.1s all;
+  background: inherit;
 }
