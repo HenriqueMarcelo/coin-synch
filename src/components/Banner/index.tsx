@@ -1,12 +1,13 @@
-import Image from 'next/image'
+'use client'
+
 import './styles.scss'
-import Carousel1Png from '@/assets/carousel-1.png'
 import { Modal } from '../Modal'
+import { Slider } from '../Slider'
 
 export function Banner() {
   return (
     <section className="container banner__container">
-      <div>
+      <div className="banner__left">
         <h2 className="banner__title">Lorem ipsum</h2>
         <p className="banner__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
@@ -25,9 +26,7 @@ export function Banner() {
           <span className="banner__tag">Games</span>
         </div>
       </div>
-      <div>
-        <Image src={Carousel1Png} alt="" />
-      </div>
+      <Slider />
     </section>
   )
 }

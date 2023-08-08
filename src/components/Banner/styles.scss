@@ -5,6 +5,10 @@
         align-items: center;
         gap: 138px;
     }
+
+    &__left {
+        flex: 1 0 590px;
+    }
     
     &__title {
         color: var(--yellow-500);
