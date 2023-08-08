@@ -9,6 +9,7 @@ import TopBtcPng from '@/assets/top-btc.png'
 // import TopEthPng from '@/assets/top-eth.png'
 // import TopSolPng from '@/assets/top-sol.png'
 import BalanceIconSvg from '@/assets/BalanceIcon.svg'
+import GraphySvg from '@/assets/graphy.svg'
 
 export default function Dashboard() {
   return (
@@ -24,12 +25,19 @@ export default function Dashboard() {
           </div>
           <div className="dashboard__price">$32,256.56</div>
         </div>
-        <div className="dashboard__card">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-          error veniam fugiat commodi cumque quis placeat eligendi ullam tempora
-          aliquid qui distinctio quos et molestias reprehenderit at quidem
-          explicabo accusamus?
+
+        <div className="dashboard__card dashboard__card--mini">
+          <div className="dashboard__variation">
+            <small className="regular__small">Daily Variation</small>
+            <div className="dashboard__acronym">
+              <Image src={TopBtcPng} alt="" />
+              ETH
+            </div>
+            <span className="regular__body regular__body--green">+5,65%</span>
+          </div>
+          <Image src={GraphySvg} alt="" />
         </div>
+
         <div className="dashboard__card">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem adipisci dolor eligendi culpa quaerat. Ipsam, soluta
