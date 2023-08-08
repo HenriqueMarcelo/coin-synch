@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import './styles.scss'
 import Carousel1Png from '@/assets/carousel-1.png'
+import { Modal } from '../Modal'
 
 export function Banner() {
   return (
@@ -12,7 +13,12 @@ export function Banner() {
           purus sit amet luctus venenatis, lectus magna fringilla urna,
           porttitor
         </p>
-        <button className="banner__button">Sign up now →</button>
+        <Modal
+          trigger={<button className="banner__button">Sign up now →</button>}
+        >
+          lorem
+        </Modal>
+
         <div className="banner__tags">
           <span className="banner__tag">Cryptos</span>
           <span className="banner__tag">NFTs</span>
