@@ -1,5 +1,7 @@
+import { Aside } from '@/components/Aside'
 import { DashboardHeader } from '@/components/DashboardHeader'
 import { ReactNode } from 'react'
+import './layout.scss'
 
 type Props = {
   children: ReactNode
@@ -7,10 +9,12 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <DashboardHeader />
-    // <div>
-    //   <nav>Lorem nav</nav>
-    //   <main>{children}</main>
-    // </div>
+    <>
+      <DashboardHeader />
+      <section className="dashboard__container">
+        <Aside />
+        <main>{children}</main>
+      </section>
+    </>
   )
 }
