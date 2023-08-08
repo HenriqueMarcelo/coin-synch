@@ -5,7 +5,7 @@ import '../Modal/styles.scss'
 
 export function SignUpModal() {
   return (
-    <Modal open>
+    <Modal>
       <form className="modal-components__form">
         <h1 className="modal-components__title">
           Sign in to

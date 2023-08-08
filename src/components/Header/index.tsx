@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import './styles.scss'
-import HeaderLogoSvg from '../../assets/header-logo.svg'
+import HeaderLogoSvg from '@/assets/header-logo.svg'
 import { Marquee } from '../Marquee'
 
 export function Header() {

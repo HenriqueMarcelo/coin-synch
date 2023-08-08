@@ -1,0 +1,35 @@
+.dashboard-header{
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 40px;
+        background-color: white;
+        box-shadow: 0px 4px 8px 0px rgba(77, 77, 77, 0.10);
+    }
+    &__left {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    &__right {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        color: var(--text-base, #5D6670);
+        text-align: right;
+        /* Regular/label */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+    }
+
+    &__image {
+        border-radius: 100px;
+    }
+    &__icon {
+        fill: var(--gray-400)
+    }
+}
