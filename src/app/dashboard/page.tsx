@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import J1Svg from '@/assets/j1.svg'
 import J2Svg from '@/assets/j2.svg'
@@ -11,6 +13,7 @@ import TopBtcPng from '@/assets/top-btc.png'
 import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 import GraphySvg from '@/assets/graphy.svg'
 import Eduphants from '@/assets/Eduphants.png'
+import { MyTooltip } from '@/components/MyTooltip'
 
 export default function Dashboard() {
   return (
@@ -96,9 +99,11 @@ export default function Dashboard() {
                   +5,65%
                 </td>
                 <td className="wallet-table__td">
-                  <button>
-                    <Image src={TradeButtonSvg} alt="" />
-                  </button>
+                  <MyTooltip text="Transfer Crypto" side="bottom">
+                    <button>
+                      <Image src={TradeButtonSvg} alt="" />
+                    </button>
+                  </MyTooltip>
                 </td>
               </tr>
             </tbody>
