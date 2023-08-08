@@ -1,9 +1,84 @@
-.Dashboard {
-    &_container {
-        background: lime;
-        color: red;
-        div div {
-            background-color: blue;
+.dashboard {
+    &__card{
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    &__header {
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: 1px solid var(--gray-200);
+    }
+    &__title {
+        color: var(--text-base, #5D6670);
+        text-align: center;
+        /* Bold / H4 */
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__button {
+        display: inline-flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        
+        border-radius: 32px;
+        background: var(--yellow-500, #FBAB34);
+
+        color: #FFF;
+        text-align: center;
+        /* Regular/label */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+        
+        &:hover {
+            background-color: var(--yellow-600);
         }
+    }
+}
+
+.empty {
+    &__container {
+        padding: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    &__title {
+        color: var(--text-base, #5D6670);
+        text-align: center;
+        /* Bold/H5 */
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 160% */
+
+        margin-top: 24px;
+    }
+    &__text {
+        color: var(--text-base, #5D6670);
+        text-align: center;
+        /* Regular/label */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
     }
 }

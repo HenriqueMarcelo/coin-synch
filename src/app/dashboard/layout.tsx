@@ -14,7 +14,7 @@ export default function Layout({ children }: Props) {
       <DashboardHeader />
       <section className="dashboard__container">
         <Aside />
-        <main>{children}</main>
+        <main className="dashboard__main">{children}</main>
       </section>
       <DashboardFooter />
     </>
