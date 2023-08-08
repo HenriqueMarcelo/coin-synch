@@ -5,13 +5,38 @@ import './page.scss'
 
 import TradeButtonSvg from '@/assets/TradeButton.svg'
 import TopBtcPng from '@/assets/top-btc.png'
-import TopAdaPng from '@/assets/top-ada.png'
-import TopEthPng from '@/assets/top-eth.png'
-import TopSolPng from '@/assets/top-sol.png'
+// import TopAdaPng from '@/assets/top-ada.png'
+// import TopEthPng from '@/assets/top-eth.png'
+// import TopSolPng from '@/assets/top-sol.png'
+import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 
 export default function Dashboard() {
   return (
     <>
+      <div className="container dashboard__row">
+        <div className="dashboard__card dashboard__card--mini">
+          <div className="dashboard__balance">
+            <Image src={BalanceIconSvg} alt="" />
+            <div>
+              <h4 className="regular__h4">Balance in US$</h4>
+              <span className="regular__body">(approximately)</span>
+            </div>
+          </div>
+          <div className="dashboard__price">$32,256.56</div>
+        </div>
+        <div className="dashboard__card">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+          error veniam fugiat commodi cumque quis placeat eligendi ullam tempora
+          aliquid qui distinctio quos et molestias reprehenderit at quidem
+          explicabo accusamus?
+        </div>
+        <div className="dashboard__card">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem adipisci dolor eligendi culpa quaerat. Ipsam, soluta
+          dolorem veniam maxime ex minima quibusdam eius sed, quas blanditiis
+          facere qui fugit fuga.
+        </div>
+      </div>
       <div className="container">
         <section className="dashboard__card">
           <header className="dashboard__header">
