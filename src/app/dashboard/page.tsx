@@ -10,6 +10,7 @@ import TopBtcPng from '@/assets/top-btc.png'
 // import TopSolPng from '@/assets/top-sol.png'
 import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 import GraphySvg from '@/assets/graphy.svg'
+import Eduphants from '@/assets/Eduphants.png'
 
 export default function Dashboard() {
   return (
@@ -38,11 +39,23 @@ export default function Dashboard() {
           <Image src={GraphySvg} alt="" />
         </div>
 
-        <div className="dashboard__card">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem adipisci dolor eligendi culpa quaerat. Ipsam, soluta
-          dolorem veniam maxime ex minima quibusdam eius sed, quas blanditiis
-          facere qui fugit fuga.
+        <div className="dashboard__card dashboard__card--mini">
+          <div className="dashboard__news">
+            <div>
+              <small className="bold__label">NFT&apos;s NEWS</small>
+              <p className="regular__small-label">
+                New ElephantX NFT <br />
+                to be lauched!
+              </p>
+            </div>
+            <a
+              href=""
+              className="regular__small-label regular__small-label--yellow"
+            >
+              Read more +
+            </a>
+          </div>
+          <Image src={Eduphants} alt="" height={143} width={143} />
         </div>
       </div>
       <div className="container">
