@@ -6,7 +6,7 @@ import '../Modal/styles.scss'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 type Props = {
@@ -14,6 +14,8 @@ type Props = {
 }
 
 export function SignUpModal({ children }: Props) {
+  const [open, setOpen] = useState(false)
+
   const router = useRouter()
 
   const signUpSchema = z
@@ -49,7 +51,7 @@ export function SignUpModal({ children }: Props) {
   }
 
   return (
-    <Modal trigger={children}>
+    <Modal trigger={children} open={open} onOpenChange={setOpen}>
       <form
         className="modal-components__form"
         onSubmit={handleSubmit(onSubmit)}
@@ -111,7 +113,7 @@ export function SignUpModal({ children }: Props) {
         <Button disabled={isSubmitting}>Sign In</Button>
         <p className="modal-components__footer">
           Already have and account?{' '}
-          <button type="button">
+          <button type="button" onClick={() => setOpen(false)}>
             <span className="modal-components__footer--bold"> Sign up to </span>
             <span className="modal-components__footer--yellow">Coin</span>
             <span className="modal-components__footer--gray">Synch</span>

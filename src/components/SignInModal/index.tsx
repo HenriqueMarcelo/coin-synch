@@ -6,7 +6,7 @@ import '../Modal/styles.scss'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 type Props = {
@@ -14,6 +14,8 @@ type Props = {
 }
 
 export function SignInModal({ children }: Props) {
+  const [open, setOpen] = useState(false)
+
   const router = useRouter()
 
   const signInSchema = z.object({
@@ -42,7 +44,7 @@ export function SignInModal({ children }: Props) {
   }
 
   return (
-    <Modal trigger={children}>
+    <Modal trigger={children} open={open} onOpenChange={setOpen}>
       <form
         className="modal-components__form"
         onSubmit={handleSubmit(onSubmit)}
