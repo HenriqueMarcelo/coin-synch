@@ -6,16 +6,14 @@ import '../Modal/styles.scss'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { DialogProps } from '@radix-ui/react-dialog'
+import { useModal } from '@/hooks/use-modal'
 
-type Props = {
-  children?: ReactNode
-}
+type Props = DialogProps
 
-export function SignUpModal({ children }: Props) {
-  const [open, setOpen] = useState(false)
-
+export function SignUpModal({ children, ...rest }: Props) {
+  const { closeSignUpModal, openSignInModal } = useModal()
   const router = useRouter()
 
   const signUpSchema = z
@@ -50,8 +48,13 @@ export function SignUpModal({ children }: Props) {
     router.push('/dashboard')
   }
 
+  function handleChangeModal() {
+    openSignInModal()
+    closeSignUpModal()
+  }
+
   return (
-    <Modal trigger={children} open={open} onOpenChange={setOpen}>
+    <Modal trigger={children} {...rest}>
       <form
         className="modal-components__form"
         onSubmit={handleSubmit(onSubmit)}
@@ -113,7 +116,7 @@ export function SignUpModal({ children }: Props) {
         <Button disabled={isSubmitting}>Sign In</Button>
         <p className="modal-components__footer">
           Already have and account?{' '}
-          <button type="button" onClick={() => setOpen(false)}>
+          <button type="button" onClick={handleChangeModal}>
             <span className="modal-components__footer--bold"> Sign up to </span>
             <span className="modal-components__footer--yellow">Coin</span>
             <span className="modal-components__footer--gray">Synch</span>

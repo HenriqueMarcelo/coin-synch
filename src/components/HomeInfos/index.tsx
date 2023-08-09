@@ -4,9 +4,11 @@ import Info1Png from '@/assets/info-1.png'
 import Info2Png from '@/assets/info-2.png'
 import Info3Png from '@/assets/info-3.png'
 import Info4Png from '@/assets/info-4.png'
-import { SignUpModal } from '../SignUpModal'
+import { useModal } from '@/hooks/use-modal'
 
 export function HomeInfos() {
+  const { openSignUpModal } = useModal()
+
   return (
     <section className="infos__full">
       <div className="infos__container container">
@@ -60,9 +62,9 @@ export function HomeInfos() {
             purus sit amet luctus venenatis, lectus magna fringilla urna,
             porttitor
           </p>
-          <SignUpModal>
-            <button className="infos__button">Sign up now</button>
-          </SignUpModal>
+          <button className="infos__button" onClick={openSignUpModal}>
+            Sign up now
+          </button>
         </div>
       </div>
     </section>

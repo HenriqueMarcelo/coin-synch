@@ -9,11 +9,12 @@ import { CryptoInfo } from '@/@types/crypto-info'
 import { getCryptos } from '@/api/cryptos'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Change } from '../Change'
-import { SignUpModal } from '../SignUpModal'
-import { SignInModal } from '../SignInModal'
+import { useModal } from '@/hooks/use-modal'
 
 export function Header() {
   const [cryptos, setCryptos] = useState<CryptoInfo[]>([])
+
+  const { openSignUpModal, openSignInModal } = useModal()
 
   useEffect(() => {
     async function aux() {
@@ -52,12 +53,12 @@ export function Header() {
               </div>
             ))}
           </Marquee>
-          <SignInModal>
-            <button className="header__link">Sign In</button>
-          </SignInModal>
-          <SignUpModal>
-            <button className="header__button">Sign Up</button>
-          </SignUpModal>
+          <button className="header__link" onClick={openSignInModal}>
+            Sign In
+          </button>
+          <button className="header__button" onClick={openSignUpModal}>
+            Sign Up
+          </button>
         </div>
       </div>
     </header>
