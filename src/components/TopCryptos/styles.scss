@@ -55,22 +55,10 @@
     }
 
     &__td {
-        color: var(--text-base, #5D6670);
-        /* Regular/body */
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
+        color: var(--text-base);
         line-height: 24px; /* 150% */
 
         padding: 0 24px;
-
-        &--green {
-            color: var(--green-700, #149E55);
-        }
-        &--red {
-            color: var(--red-700, #149E55);
-        }
     }
 
     &__image {

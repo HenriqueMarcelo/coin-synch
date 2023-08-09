@@ -1,0 +1,8 @@
+.change {
+    &--green {
+        color: var(--green-700);
+    }
+    &--red {
+        color: var(--red-700);
+    }
+}
