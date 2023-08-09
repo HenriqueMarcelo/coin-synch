@@ -1,4 +1,4 @@
-import { EnvelopeSimple, Lock } from '@phosphor-icons/react'
+import { EnvelopeSimple, Lock, User } from '@phosphor-icons/react'
 import { Button } from '../Button'
 import { Input } from '../Input'
 import { Modal } from '../Modal'
@@ -16,10 +16,17 @@ type Props = {
 export function SignUpModal({ children }: Props) {
   const router = useRouter()
 
-  const signUpSchema = z.object({
-    email: z.string().email(),
-    password: z.string().nonempty(),
-  })
+  const signUpSchema = z
+    .object({
+      name: z.string().nonempty(),
+      email: z.string().email(),
+      password: z.string().nonempty(),
+      confirm_password: z.string().nonempty(),
+    })
+    .refine((data) => data.password === data.confirm_password, {
+      message: "Passwords don't match",
+      path: ['confirm_password'], // path of error
+    })
 
   type SignUp = z.infer<typeof signUpSchema>
 
@@ -48,7 +55,7 @@ export function SignUpModal({ children }: Props) {
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="modal-components__title">
-          Sign in to
+          Sign up to
           <span className="modal-components__logo modal-components__logo--yellow">
             {' '}
             Coin
@@ -57,6 +64,14 @@ export function SignUpModal({ children }: Props) {
             Synch
           </span>
         </h1>
+        <Input
+          placeholder="Name"
+          type="text"
+          Icon={User}
+          disabled={isSubmitting}
+          error={!!errors.name}
+          {...register('name')}
+        />
         <Input
           placeholder="Email"
           type="email"
@@ -73,15 +88,34 @@ export function SignUpModal({ children }: Props) {
           error={!!errors.password}
           {...register('password')}
         />
-        <button className="modal-components__forgot">Forgot password?</button>
+        <Input
+          placeholder="Confirm password"
+          type="password"
+          Icon={Lock}
+          disabled={isSubmitting}
+          error={!!errors.confirm_password}
+          {...register('confirm_password')}
+        />
+        <div className="modal-components__policy">
+          <input
+            required
+            type="checkbox"
+            className="modal-components__checkbox"
+          />
+          <p>
+            I have read and accept the
+            <strong> Privacy Policy</strong> and{' '}
+            <strong>Terms of User Sign up</strong>.
+          </p>
+        </div>
         <Button disabled={isSubmitting}>Sign In</Button>
         <p className="modal-components__footer">
-          Don&apos;t have an account?
-          <a href="">
+          Already have and account?{' '}
+          <button type="button">
             <span className="modal-components__footer--bold"> Sign up to </span>
             <span className="modal-components__footer--yellow">Coin</span>
             <span className="modal-components__footer--gray">Synch</span>
-          </a>
+          </button>
         </p>
       </form>
     </Modal>

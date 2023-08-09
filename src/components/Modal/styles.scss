@@ -148,4 +148,52 @@
     align-self: flex-end;
     margin-top: -16px;
   }
+
+  &__policy {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+
+    color: var(--text-base);
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+  }
+
+  &__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 19px;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+    border: 1px solid var(--yellow-500);
+    background: #FFF;
+
+    &:checked {
+      background-color: var(--yellow-500);
+      background-image: url(/*custom checked icon url*/);
+
+      &::after {
+        content: '✓';
+        height: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      border: 1px solid var(--yellow-600);
+      &:checked {
+        background-color: var(--yellow-600);
+        background-image: url(/*custom checked icon url*/);
+      }
+    }
+  }
 }
