@@ -1,18 +1,5 @@
 {
-  "newsletter": [
-    {
-      "email": "marcelo@henrique.com",
-      "id": 1
-    },
-    {
-      "email": "asd@da.sdfg",
-      "id": 2
-    },
-    {
-      "email": "marcelo@henrique.com.br",
-      "id": 3
-    }
-  ],
+  "newsletter": [],
   "top-cryptos": [
     "BTC",
     "ETH",

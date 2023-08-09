@@ -9,6 +9,7 @@ import { CryptoInfo } from '@/@types/crypto-info'
 import { getCryptos } from '@/api/cryptos'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Change } from '../Change'
+import { SignUpModal } from '../SignUpModal'
 
 export function Header() {
   const [cryptos, setCryptos] = useState<CryptoInfo[]>([])
@@ -53,7 +54,9 @@ export function Header() {
           <a href="" className="header__link">
             Sign In
           </a>
-          <button className="header__button">Sign Up</button>
+          <SignUpModal>
+            <button className="header__button">Sign Up</button>
+          </SignUpModal>
         </div>
       </div>
     </header>

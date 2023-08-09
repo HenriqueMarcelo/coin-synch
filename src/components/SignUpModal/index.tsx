@@ -6,9 +6,16 @@ import '../Modal/styles.scss'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { redirect } from 'next/navigation'
+import { ReactNode } from 'react'
+import { useRouter } from 'next/navigation'
 
-export function SignUpModal() {
+type Props = {
+  children?: ReactNode
+}
+
+export function SignUpModal({ children }: Props) {
+  const router = useRouter()
+
   const signUpSchema = z.object({
     email: z.string().email(),
     password: z.string().nonempty(),
@@ -27,15 +34,15 @@ export function SignUpModal() {
 
   async function onSubmit({ email, password }: SignUp) {
     // simulando espera de 1 segundo
-    await new Promise((resolve) => setTimeout(resolve, 10000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     console.log(email, password)
     reset()
 
-    redirect('/dashboard')
+    router.push('/dashboard')
   }
 
   return (
-    <Modal open>
+    <Modal trigger={children}>
       <form
         className="modal-components__form"
         onSubmit={handleSubmit(onSubmit)}

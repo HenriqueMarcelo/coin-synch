@@ -1,8 +1,9 @@
 'use client'
 
 import './styles.scss'
-import { Modal } from '../Modal'
 import { Slider } from '../Slider'
+import { SignUpModal } from '../SignUpModal'
+import { ArrowRight } from '@phosphor-icons/react'
 
 export function Banner() {
   return (
@@ -14,11 +15,12 @@ export function Banner() {
           purus sit amet luctus venenatis, lectus magna fringilla urna,
           porttitor
         </p>
-        <Modal
-          trigger={<button className="banner__button">Sign up now →</button>}
-        >
-          lorem
-        </Modal>
+
+        <SignUpModal>
+          <button className="banner__button">
+            Sign up now <ArrowRight size={16} />
+          </button>
+        </SignUpModal>
 
         <div className="banner__tags">
           <span className="banner__tag">Cryptos</span>

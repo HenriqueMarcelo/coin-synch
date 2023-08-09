@@ -4,6 +4,7 @@ import Info1Png from '@/assets/info-1.png'
 import Info2Png from '@/assets/info-2.png'
 import Info3Png from '@/assets/info-3.png'
 import Info4Png from '@/assets/info-4.png'
+import { SignUpModal } from '../SignUpModal'
 
 export function HomeInfos() {
   return (
@@ -59,7 +60,9 @@ export function HomeInfos() {
             purus sit amet luctus venenatis, lectus magna fringilla urna,
             porttitor
           </p>
-          <button className="infos__button">Sign up now</button>
+          <SignUpModal>
+            <button className="infos__button">Sign up now</button>
+          </SignUpModal>
         </div>
       </div>
     </section>
