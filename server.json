@@ -1,0 +1,47 @@
+{
+    "top-cryptos": [
+        "BTC", "ETH", "USDT", "BNB", "XRP",  "USDC", "DOGE", "ADA", "SOL", "TRX"
+    ], 
+    "crypto-change": [
+        {
+            "crypto": "BTC",
+            "change": 1.74
+        },
+        {
+            "crypto": "ETH",
+            "change": 1.39
+        },
+        {
+            "crypto": "USDT",
+            "change": 0.09
+        },
+        {
+            "crypto": "BNB",
+            "change": 0.57
+        },
+        {
+            "crypto": "XRP",
+            "change": 5.25
+        },
+        {
+            "crypto": "USDC",
+            "change": -0.04
+        },
+        {
+            "crypto": "DOGE",
+            "change": 2.43
+        },
+        {
+            "crypto": "ADA",
+            "change": 1.93
+        },
+        {
+            "crypto": "SOL",
+            "change": 6.15
+        },
+        {
+            "crypto": "TRON",
+            "change": -0.22
+        }
+    ]
+}
