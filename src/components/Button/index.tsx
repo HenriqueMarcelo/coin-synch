@@ -1,9 +1,7 @@
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 import './styles.scss'
 
-type Props = {
-  children: ReactNode
-}
+type Props = ButtonHTMLAttributes<HTMLButtonElement>
 
 export function Button({ children, ...rest }: Props) {
   return (

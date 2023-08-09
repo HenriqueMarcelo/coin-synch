@@ -18,6 +18,13 @@
         svg {
             fill: var(--gray-400);
         }
+
+        &--error {
+            border-color: var(--red-400)!important;
+            svg {
+                fill: var(--red-400)!important;
+            }
+        }
     }
     &__input {
         border: none;

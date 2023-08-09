@@ -1,3 +1,5 @@
+'use client'
+
 import { Header } from '@/components/Header'
 import Image from 'next/image'
 import WavesPng from '@/assets/waves.png'
@@ -7,10 +9,12 @@ import { TopCryptos } from '@/components/TopCryptos'
 import { Subscribe } from '@/components/Subscribe'
 import { Footer } from '@/components/Footer'
 import { Banner } from '@/components/Banner'
+import { SignUpModal } from '@/components/SignUpModal'
 
 export default function Home() {
   return (
     <main>
+      <SignUpModal />
       <Header />
       <Banner />
       <Image src={WavesPng} alt="" className="waves__image" />

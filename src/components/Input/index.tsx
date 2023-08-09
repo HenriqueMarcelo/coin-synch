@@ -6,10 +6,11 @@ import { InputHTMLAttributes, forwardRef, useState } from 'react'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   Icon?: IconType
+  error?: boolean
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ type, Icon, ...rest }, ref) => {
+  ({ type, Icon, error = false, ...rest }, ref) => {
     const [showPassword, setShowPassword] = useState(false)
 
     function handleToggleShowPassword() {
@@ -27,7 +28,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     }
 
     return (
-      <label className="input__container">
+      <label
+        className={`input__container ${error && 'input__container--error'}`}
+      >
         {Icon && <Icon />}
         <input className="input__input" type={customType} ref={ref} {...rest} />
         {isPassword && (

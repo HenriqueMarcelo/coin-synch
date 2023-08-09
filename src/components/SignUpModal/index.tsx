@@ -1,13 +1,45 @@
-import { Lock } from '@phosphor-icons/react'
+import { EnvelopeSimple, Lock } from '@phosphor-icons/react'
 import { Button } from '../Button'
 import { Input } from '../Input'
 import { Modal } from '../Modal'
 import '../Modal/styles.scss'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from 'zod'
+import { redirect } from 'next/navigation'
 
 export function SignUpModal() {
+  const signUpSchema = z.object({
+    email: z.string().email(),
+    password: z.string().nonempty(),
+  })
+
+  type SignUp = z.infer<typeof signUpSchema>
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<SignUp>({
+    resolver: zodResolver(signUpSchema),
+  })
+
+  async function onSubmit({ email, password }: SignUp) {
+    // simulando espera de 1 segundo
+    await new Promise((resolve) => setTimeout(resolve, 10000))
+    console.log(email, password)
+    reset()
+
+    redirect('/dashboard')
+  }
+
   return (
     <Modal open>
-      <form className="modal-components__form">
+      <form
+        className="modal-components__form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <h1 className="modal-components__title">
           Sign in to
           <span className="modal-components__logo modal-components__logo--yellow">
@@ -18,10 +50,24 @@ export function SignUpModal() {
             Synch
           </span>
         </h1>
-        <Input />
-        <Input type="password" Icon={Lock} />
+        <Input
+          placeholder="Email"
+          type="email"
+          Icon={EnvelopeSimple}
+          disabled={isSubmitting}
+          error={!!errors.email}
+          {...register('email')}
+        />
+        <Input
+          placeholder="Password"
+          type="password"
+          Icon={Lock}
+          disabled={isSubmitting}
+          error={!!errors.password}
+          {...register('password')}
+        />
         <button className="modal-components__forgot">Forgot password?</button>
-        <Button>Sign In</Button>
+        <Button disabled={isSubmitting}>Sign In</Button>
         <p className="modal-components__footer">
           Don&apos;t have an account?
           <a href="">

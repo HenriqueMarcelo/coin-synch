@@ -1,5 +1,6 @@
 .modal {
     &__overlay {
+        z-index: 3;
         background-color: var(--text-base);
         opacity: 0.9;
         position: fixed;
@@ -7,6 +8,7 @@
         animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
     }
     &__content {
+        z-index: 4;
         display: inline-flex;
         padding: 32px;
         flex-direction: column;
