@@ -1,9 +1,25 @@
+'use client'
+
 import Image from 'next/image'
 import './styles.scss'
 import HeaderLogoSvg from '@/assets/header-logo.svg'
 import { Marquee } from '../Marquee'
+import { useEffect, useState } from 'react'
+import { CryptoInfo } from '@/@types/crypto-info'
+import { getCryptos } from '@/api/cryptos'
+import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
+import { Change } from '../Change'
 
 export function Header() {
+  const [cryptos, setCryptos] = useState<CryptoInfo[]>([])
+
+  useEffect(() => {
+    async function aux() {
+      setCryptos(await getCryptos())
+    }
+    aux()
+  }, [])
+
   return (
     <header className="header__container container">
       <div className="header__left">
@@ -20,21 +36,19 @@ export function Header() {
       <div className="header__right">
         <div className="header__links">
           <Marquee>
-            <div className="header__tag">
-              <span className="header__text header__text--dark">BIT</span>
-              <span className="header__text">R$ 23,62 </span>
-              <span className="header__text header__text--green">+7,082</span>
-            </div>
-            <div className="header__tag">
-              <span className="header__text header__text--dark">DOG</span>
-              <span className="header__text">R$ 23,62 </span>
-              <span className="header__text header__text--red">-5,230</span>
-            </div>
-            <div className="header__tag">
-              <span className="header__text header__text--dark">ETH</span>
-              <span className="header__text">R$ 1,08 </span>
-              <span className="header__text header__text--red">-10,457</span>
-            </div>
+            {cryptos.map((crypto) => (
+              <div className="header__tag" key={crypto.code}>
+                <span className="header__text header__text--dark">
+                  {crypto.code}
+                </span>
+                <span className="header__text">
+                  {convertNumberToUsd(crypto.priceUsd)}{' '}
+                </span>
+                <span className="header__text">
+                  <Change value={crypto.change} />
+                </span>
+              </div>
+            ))}
           </Marquee>
           <a href="" className="header__link">
             Sign In
