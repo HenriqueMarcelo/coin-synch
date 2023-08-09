@@ -14,10 +14,12 @@ import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 import GraphySvg from '@/assets/graphy.svg'
 import Eduphants from '@/assets/Eduphants.png'
 import { MyTooltip } from '@/components/MyTooltip'
+import { SignUpModal } from '@/components/SignUpModal'
 
 export default function Dashboard() {
   return (
     <>
+      <SignUpModal />
       <div className="container dashboard__row">
         <div className="dashboard__card dashboard__card--mini">
           <div className="dashboard__balance">
