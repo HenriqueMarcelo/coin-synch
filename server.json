@@ -1,236 +1,259 @@
 {
-    "top-cryptos": [
-        "BTC", "ETH", "USDT", "BNB", "XRP",  "USDC", "DOGE", "ADA", "SOL", "TRX"
-    ], 
-    "crypto-change": [
-        {
-            "crypto": "BTC",
-            "change": 1.74
-        },
-        {
-            "crypto": "ETH",
-            "change": 1.39
-        },
-        {
-            "crypto": "USDT",
-            "change": 0.09
-        },
-        {
-            "crypto": "BNB",
-            "change": 0.57
-        },
-        {
-            "crypto": "XRP",
-            "change": 5.25
-        },
-        {
-            "crypto": "USDC",
-            "change": -0.04
-        },
-        {
-            "crypto": "DOGE",
-            "change": 2.43
-        },
-        {
-            "crypto": "ADA",
-            "change": 1.93
-        },
-        {
-            "crypto": "SOL",
-            "change": 6.15
-        },
-        {
-            "crypto": "TRX",
-            "change": -0.22
-        }
-    ],
-    "mock-coin": [
-        {
-          "asset_id": "BTC",
-          "name": "Bitcoin",
-          "type_is_crypto": 1,
-          "data_quote_start": "2014-02-24T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2014-02-24T17:43:05.0000000Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2010-07-17T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 160191,
-          "volume_1hrs_usd": 21442205352306961.77,
-          "volume_1day_usd": 8958371828037501988.16,
-          "volume_1mth_usd": 133578568118027972408.41,
-          "price_usd": 29894.835211257771236348833764,
-          "id_icon": "4caf2b16-a017-4e26-a348-2cea69c34cba",
-          "data_start": "2010-07-17",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "XRP",
-          "name": "Ripple",
-          "type_is_crypto": 1,
-          "data_quote_start": "2014-08-01T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2014-07-31T13:05:46.0000000Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2013-11-25T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 6595,
-          "volume_1hrs_usd": 765323086.70,
-          "volume_1day_usd": 11632320464.85,
-          "volume_1mth_usd": 414530518062.13,
-          "price_usd": 0.6591675606422917258691810376,
-          "id_icon": "ba90bcb0-cafb-4801-ac5d-d310f47d6411",
-          "data_start": "2013-11-25",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "USDT",
-          "name": "Tether",
-          "type_is_crypto": 1,
-          "data_quote_start": "2016-06-12T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2016-06-12T11:53:38.1680117Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2013-12-27T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 138007,
-          "volume_1hrs_usd": 118593380768809677.50,
-          "volume_1day_usd": 13289548491723935594.71,
-          "volume_1mth_usd": 250511660726777829016.24,
-          "price_usd": 0.9994344999755853353803168005,
-          "id_icon": "5ed65416-963e-4e57-998a-3c302da8936e",
-          "data_start": "2013-12-27",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "DOGE",
-          "name": "DogeCoin",
-          "type_is_crypto": 1,
-          "data_quote_start": "2014-08-01T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2014-07-31T13:05:46.0000000Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2014-02-21T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 5391,
-          "volume_1hrs_usd": 144140987.33,
-          "volume_1day_usd": 66497017565.85,
-          "volume_1mth_usd": 13959108896322327.05,
-          "price_usd": 0.0758809604785747965215529356,
-          "id_icon": "63e240f3-047f-41c7-9179-6784bc719f63",
-          "data_start": "2014-02-21",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "ETH",
-          "name": "Ethereum",
-          "type_is_crypto": 1,
-          "data_quote_start": "2015-08-08T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2015-08-07T14:50:38.1774950Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2015-08-07T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 127101,
-          "volume_1hrs_usd": 119500838765729.80,
-          "volume_1day_usd": 7517126479253954.06,
-          "volume_1mth_usd": 276816224331294714.58,
-          "price_usd": 1861.2251990452442365669705677,
-          "id_icon": "604ae453-3d9f-4ad0-9a48-9905cce617c2",
-          "data_start": "2015-08-07",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "BNB",
-          "name": "Binance Coin",
-          "type_is_crypto": 1,
-          "data_quote_start": "2017-03-20T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2017-03-19T01:03:17.3570790Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2017-01-14T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 8429,
-          "volume_1hrs_usd": 760843685.88,
-          "volume_1day_usd": 17406196909.76,
-          "volume_1mth_usd": 1435538096979.63,
-          "price_usd": 244.58625454122790455678982947,
-          "data_start": "2017-01-14",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "TRX",
-          "name": "TRON",
-          "type_is_crypto": 1,
-          "data_quote_start": "2017-09-24T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2017-09-23T17:49:17.4793009Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2017-09-23T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 1857,
-          "volume_1hrs_usd": 14606197.09,
-          "volume_1day_usd": 1036402930.94,
-          "volume_1mth_usd": 47348471350.63,
-          "price_usd": 0.0763516771997744900800960008,
-          "id_icon": "2fb39015-430a-4945-a645-8407b6c0fdc5",
-          "data_start": "2017-09-23",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "ADA",
-          "name": "Cardano",
-          "type_is_crypto": 1,
-          "data_quote_start": "2017-09-30T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2017-09-29T07:11:06.6463948Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2017-10-01T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 892,
-          "volume_1hrs_usd": 31635523.48,
-          "volume_1day_usd": 738356132.45,
-          "volume_1mth_usd": 24890130148.38,
-          "price_usd": 0.2997316255967095324973621274,
-          "id_icon": "2701173b-1b77-40f2-8693-9659359e225c",
-          "data_start": "2017-09-29",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "SOL",
-          "name": "SOL",
-          "type_is_crypto": 1,
-          "data_quote_start": "2018-01-17T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2018-01-16T20:27:45.6566380Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2018-01-13T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 19183,
-          "volume_1hrs_usd": 924785519.53,
-          "volume_1day_usd": 44273752878.28,
-          "volume_1mth_usd": 101506461734594.33,
-          "price_usd": 24.746013313585703058248446176,
-          "data_start": "2018-01-13",
-          "data_end": "2023-08-08"
-        },
-        {
-          "asset_id": "USDC",
-          "name": "USDC",
-          "type_is_crypto": 1,
-          "data_quote_start": "2018-09-27T00:00:00.0000000Z",
-          "data_quote_end": "2023-08-08T00:00:00.0000000Z",
-          "data_orderbook_start": "2018-09-27T13:59:45.3900727Z",
-          "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
-          "data_trade_start": "2018-09-27T00:00:00.0000000Z",
-          "data_trade_end": "2023-08-08T00:00:00.0000000Z",
-          "data_symbols_count": 3011,
-          "volume_1hrs_usd": 7975664974.84,
-          "volume_1day_usd": 151641848907.14,
-          "volume_1mth_usd": 4734977525865.92,
-          "price_usd": 1.000052010080634005555277069,
-          "data_start": "2018-09-27",
-          "data_end": "2023-08-08"
-        }
-      ]
+  "newsletter": [
+    {
+      "email": "marcelo@henrique.com",
+      "id": 1
+    },
+    {
+      "email": "asd@da.sdfg",
+      "id": 2
+    },
+    {
+      "email": "marcelo@henrique.com.br",
+      "id": 3
+    }
+  ],
+  "top-cryptos": [
+    "BTC",
+    "ETH",
+    "USDT",
+    "BNB",
+    "XRP",
+    "USDC",
+    "DOGE",
+    "ADA",
+    "SOL",
+    "TRX"
+  ],
+  "crypto-change": [
+    {
+      "crypto": "BTC",
+      "change": 1.74
+    },
+    {
+      "crypto": "ETH",
+      "change": 1.39
+    },
+    {
+      "crypto": "USDT",
+      "change": 0.09
+    },
+    {
+      "crypto": "BNB",
+      "change": 0.57
+    },
+    {
+      "crypto": "XRP",
+      "change": 5.25
+    },
+    {
+      "crypto": "USDC",
+      "change": -0.04
+    },
+    {
+      "crypto": "DOGE",
+      "change": 2.43
+    },
+    {
+      "crypto": "ADA",
+      "change": 1.93
+    },
+    {
+      "crypto": "SOL",
+      "change": 6.15
+    },
+    {
+      "crypto": "TRX",
+      "change": -0.22
+    }
+  ],
+  "mock-coin": [
+    {
+      "asset_id": "BTC",
+      "name": "Bitcoin",
+      "type_is_crypto": 1,
+      "data_quote_start": "2014-02-24T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2014-02-24T17:43:05.0000000Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2010-07-17T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 160191,
+      "volume_1hrs_usd": 21442205352306960,
+      "volume_1day_usd": 8958371828037502000,
+      "volume_1mth_usd": 133578568118027980000,
+      "price_usd": 29894.83521125777,
+      "id_icon": "4caf2b16-a017-4e26-a348-2cea69c34cba",
+      "data_start": "2010-07-17",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "XRP",
+      "name": "Ripple",
+      "type_is_crypto": 1,
+      "data_quote_start": "2014-08-01T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2014-07-31T13:05:46.0000000Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2013-11-25T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 6595,
+      "volume_1hrs_usd": 765323086.7,
+      "volume_1day_usd": 11632320464.85,
+      "volume_1mth_usd": 414530518062.13,
+      "price_usd": 0.6591675606422918,
+      "id_icon": "ba90bcb0-cafb-4801-ac5d-d310f47d6411",
+      "data_start": "2013-11-25",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "USDT",
+      "name": "Tether",
+      "type_is_crypto": 1,
+      "data_quote_start": "2016-06-12T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2016-06-12T11:53:38.1680117Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2013-12-27T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 138007,
+      "volume_1hrs_usd": 118593380768809680,
+      "volume_1day_usd": 13289548491723936000,
+      "volume_1mth_usd": 250511660726777840000,
+      "price_usd": 0.9994344999755853,
+      "id_icon": "5ed65416-963e-4e57-998a-3c302da8936e",
+      "data_start": "2013-12-27",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "DOGE",
+      "name": "DogeCoin",
+      "type_is_crypto": 1,
+      "data_quote_start": "2014-08-01T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2014-07-31T13:05:46.0000000Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2014-02-21T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 5391,
+      "volume_1hrs_usd": 144140987.33,
+      "volume_1day_usd": 66497017565.85,
+      "volume_1mth_usd": 13959108896322328,
+      "price_usd": 0.0758809604785748,
+      "id_icon": "63e240f3-047f-41c7-9179-6784bc719f63",
+      "data_start": "2014-02-21",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "ETH",
+      "name": "Ethereum",
+      "type_is_crypto": 1,
+      "data_quote_start": "2015-08-08T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2015-08-07T14:50:38.1774950Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2015-08-07T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 127101,
+      "volume_1hrs_usd": 119500838765729.8,
+      "volume_1day_usd": 7517126479253954,
+      "volume_1mth_usd": 276816224331294720,
+      "price_usd": 1861.2251990452442,
+      "id_icon": "604ae453-3d9f-4ad0-9a48-9905cce617c2",
+      "data_start": "2015-08-07",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "BNB",
+      "name": "Binance Coin",
+      "type_is_crypto": 1,
+      "data_quote_start": "2017-03-20T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2017-03-19T01:03:17.3570790Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2017-01-14T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 8429,
+      "volume_1hrs_usd": 760843685.88,
+      "volume_1day_usd": 17406196909.76,
+      "volume_1mth_usd": 1435538096979.63,
+      "price_usd": 244.5862545412279,
+      "data_start": "2017-01-14",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "TRX",
+      "name": "TRON",
+      "type_is_crypto": 1,
+      "data_quote_start": "2017-09-24T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2017-09-23T17:49:17.4793009Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2017-09-23T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 1857,
+      "volume_1hrs_usd": 14606197.09,
+      "volume_1day_usd": 1036402930.94,
+      "volume_1mth_usd": 47348471350.63,
+      "price_usd": 0.0763516771997745,
+      "id_icon": "2fb39015-430a-4945-a645-8407b6c0fdc5",
+      "data_start": "2017-09-23",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "ADA",
+      "name": "Cardano",
+      "type_is_crypto": 1,
+      "data_quote_start": "2017-09-30T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2017-09-29T07:11:06.6463948Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2017-10-01T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 892,
+      "volume_1hrs_usd": 31635523.48,
+      "volume_1day_usd": 738356132.45,
+      "volume_1mth_usd": 24890130148.38,
+      "price_usd": 0.2997316255967095,
+      "id_icon": "2701173b-1b77-40f2-8693-9659359e225c",
+      "data_start": "2017-09-29",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "SOL",
+      "name": "SOL",
+      "type_is_crypto": 1,
+      "data_quote_start": "2018-01-17T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2018-01-16T20:27:45.6566380Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2018-01-13T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 19183,
+      "volume_1hrs_usd": 924785519.53,
+      "volume_1day_usd": 44273752878.28,
+      "volume_1mth_usd": 101506461734594.33,
+      "price_usd": 24.746013313585703,
+      "data_start": "2018-01-13",
+      "data_end": "2023-08-08"
+    },
+    {
+      "asset_id": "USDC",
+      "name": "USDC",
+      "type_is_crypto": 1,
+      "data_quote_start": "2018-09-27T00:00:00.0000000Z",
+      "data_quote_end": "2023-08-08T00:00:00.0000000Z",
+      "data_orderbook_start": "2018-09-27T13:59:45.3900727Z",
+      "data_orderbook_end": "2023-07-07T00:00:00.0000000Z",
+      "data_trade_start": "2018-09-27T00:00:00.0000000Z",
+      "data_trade_end": "2023-08-08T00:00:00.0000000Z",
+      "data_symbols_count": 3011,
+      "volume_1hrs_usd": 7975664974.84,
+      "volume_1day_usd": 151641848907.14,
+      "volume_1mth_usd": 4734977525865.92,
+      "price_usd": 1.000052010080634,
+      "data_start": "2018-09-27",
+      "data_end": "2023-08-08"
+    }
+  ]
 }

@@ -75,3 +75,7 @@ button {
   transition: 0.1s all;
   background: inherit;
 }
+
+button[disabled] {
+  cursor: not-allowed;
+}
