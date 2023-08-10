@@ -3,10 +3,6 @@
 import Image from 'next/image'
 import './page.scss'
 
-import TopBtcPng from '@/assets/top-btc.png'
-// import TopAdaPng from '@/assets/top-ada.png'
-// import TopEthPng from '@/assets/top-eth.png'
-// import TopSolPng from '@/assets/top-sol.png'
 import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 import Eduphants from '@/assets/Eduphants.png'
 
