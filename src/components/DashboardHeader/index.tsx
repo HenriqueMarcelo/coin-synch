@@ -5,8 +5,13 @@ import HeaderLogoSvg from '@/assets/header-logo.svg'
 import './styles.scss'
 import { CaretDown } from '@phosphor-icons/react'
 import { MyPopover } from '../MyPopover'
+import { UserInfo } from '@/@types/user-info'
 
-export function DashboardHeader() {
+type Props = {
+  user: UserInfo
+}
+
+export function DashboardHeader({ user }: Props) {
   return (
     <header className="dashboard-header__container">
       <div className="dashboard-header__left">
@@ -15,13 +20,13 @@ export function DashboardHeader() {
       <MyPopover>
         <button className="dashboard-header__right">
           <Image
-            src={'http://via.placeholder.com/640x640'}
+            src={`https://ui-avatars.com/api/?color=AD721A&name=${user.name}`}
             width={32}
             height={32}
             alt=""
             className="dashboard-header__image"
           />
-          Marcelo
+          {user.name}
           <CaretDown className="dashboard-header__icon" size={16} />
         </button>
       </MyPopover>

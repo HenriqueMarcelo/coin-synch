@@ -14,8 +14,19 @@ import BalanceIconSvg from '@/assets/BalanceIcon.svg'
 import GraphySvg from '@/assets/graphy.svg'
 import Eduphants from '@/assets/Eduphants.png'
 import { MyTooltip } from '@/components/MyTooltip'
+import { useUser } from '@/hooks/use-user'
 
-export default function Dashboard() {
+type Params = {
+  params: { user_id: string }
+}
+
+export default function Dashboard({ params: { user_id } }: Params) {
+  const { user } = useUser(user_id)
+
+  if (!user) {
+    return null
+  }
+
   return (
     <>
       <div className="container dashboard__row">

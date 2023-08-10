@@ -6,7 +6,6 @@ import '../Modal/styles.scss'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
 import { apiJson } from '@/lib/axios'
@@ -15,7 +14,6 @@ type Props = DialogProps
 
 export function SignUpModal({ children, ...rest }: Props) {
   const { closeSignUpModal, openSignInModal } = useModal()
-  const router = useRouter()
 
   const signUpSchema = z
     .object({
@@ -44,7 +42,8 @@ export function SignUpModal({ children, ...rest }: Props) {
     await apiJson.post('/users', { name, email, password })
 
     reset()
-    router.push('/dashboard')
+    closeSignUpModal()
+    // todo toaster de confirmação
   }
 
   function handleChangeModal() {

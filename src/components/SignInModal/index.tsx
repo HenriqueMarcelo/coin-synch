@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
 import { apiJson } from '@/lib/axios'
+import { UserInfo } from '@/@types/user-info'
 
 type Props = DialogProps
 
@@ -34,7 +35,7 @@ export function SignInModal({ children, ...rest }: Props) {
   })
 
   async function onSubmit({ email, password }: SignIn) {
-    const { data } = await apiJson.get(
+    const { data } = await apiJson.get<UserInfo[]>(
       `/users?email=${email}&password=${password}`,
     )
 
