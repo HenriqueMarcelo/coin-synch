@@ -16,12 +16,15 @@ import { useUserWallet } from '@/hooks/use-user-wallet'
 import { useMemo } from 'react'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Chart } from '@/components/Chart'
+import { useCryptos } from '@/hooks/use-cryptos'
+import { Change } from '@/components/Change'
 
 type Params = {
   params: { user_id: string }
 }
 
 export default function Dashboard({ params: { user_id } }: Params) {
+  const { cryptos } = useCryptos()
   const { user } = useUser(user_id)
   // todo fix user
   const { userTable } = useUserWallet('1')
@@ -36,7 +39,9 @@ export default function Dashboard({ params: { user_id } }: Params) {
     return convertNumberToUsd(Number(total))
   }, [userTable])
 
-  if (!user) {
+  const firstCrypto = cryptos[0]
+
+  if (!user || !firstCrypto) {
     return null
   }
 
@@ -58,12 +63,19 @@ export default function Dashboard({ params: { user_id } }: Params) {
           <div className="dashboard__variation">
             <small className="regular__small">Daily Variation</small>
             <div className="dashboard__acronym">
-              <Image src={TopBtcPng} alt="" />
-              ETH
+              <Image
+                src={firstCrypto.imageUrl}
+                height={32}
+                width={32}
+                alt={firstCrypto.code}
+              />
+              {firstCrypto.code}
             </div>
-            <span className="regular__body regular__body--green">+5,65%</span>
+            <span className="regular__body">
+              <Change value={firstCrypto.change} percentage />
+            </span>
           </div>
-          <Chart />
+          <Chart history={firstCrypto.history} />
         </div>
 
         <div className="dashboard__card dashboard__card--mini">

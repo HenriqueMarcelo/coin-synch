@@ -3,7 +3,12 @@ import { /* apiCoin, */ apiJson } from '@/lib/axios'
 import { iconsLinks } from '@/storage/icons-links'
 
 type AllCryptosPossible = keyof typeof iconsLinks
-type CryptoChangeAPI = { crypto: AllCryptosPossible; change: number }
+type CryptoChangeAPI = {
+  crypto: AllCryptosPossible
+  change: number
+  history: number[]
+}
+
 type CryptoDataAPI = {
   price_usd: number
   name: string
@@ -19,12 +24,15 @@ export async function getCryptos() {
   const allCryptosChange = await apiJson.get<CryptoChangeAPI[]>('crypto-change')
 
   const topCryptosList = topCryptosData.data.map((cryptoData) => {
-    const change = allCryptosChange.data.find(
+    const aux = allCryptosChange.data.find(
       (c) => c.crypto === cryptoData.asset_id,
-    )?.change
+    )
+    const change = aux?.change || null
+    const history = aux?.history || null
 
     return {
       change,
+      history,
       code: cryptoData.asset_id,
       name: cryptoData.name,
       imageUrl: iconsLinks[cryptoData.asset_id],

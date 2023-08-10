@@ -43,21 +43,24 @@ const options = {
 
 const labels = ['', '', '', '', '']
 
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Variation',
-      data: [1, 5, 4, 7, 2],
-      borderColor: '#AD721A',
-      backgroundColor: '#FFE1B5',
-      tension: 0.3,
-      //   fill: true,
-    },
-  ],
+type Props = {
+  history: number[]
 }
 
-export function Chart() {
+export function Chart({ history }: Props) {
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Variation',
+        data: history,
+        borderColor: '#AD721A',
+        backgroundColor: '#FFE1B5',
+        tension: 0.3,
+        //   fill: true,
+      },
+    ],
+  }
   return (
     <div className="chart__container">
       <Line options={options} data={data} />

@@ -4,4 +4,5 @@ export type CryptoInfo = {
   priceUsd: number
   change: number
   imageUrl: string
+  history: number[]
 }
