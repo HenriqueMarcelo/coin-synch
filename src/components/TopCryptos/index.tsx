@@ -3,26 +3,18 @@
 import Image from 'next/image'
 import './styles.scss'
 
-import { useEffect, useState } from 'react'
-import { CryptoInfo } from '@/@types/crypto-info'
-import { getCryptos } from '@/api/cryptos'
 import { Change } from '../Change'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 
 import Image404Png from '@/assets/404.png'
+import { useCryptos } from '@/hooks/use-cryptos'
+import { useState } from 'react'
 
 export function TopCryptos() {
-  const [cryptos, setCryptos] = useState<CryptoInfo[]>([])
   const [showAll, setShowAll] = useState(false)
 
+  const { cryptos } = useCryptos()
   const cryptosList = showAll ? cryptos : cryptos.slice(0, 5)
-
-  useEffect(() => {
-    async function aux() {
-      setCryptos(await getCryptos())
-    }
-    aux()
-  }, [])
 
   function handleTogleShowAll() {
     setShowAll((state) => !state)
