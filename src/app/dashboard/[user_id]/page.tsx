@@ -15,6 +15,7 @@ import GraphySvg from '@/assets/graphy.svg'
 import Eduphants from '@/assets/Eduphants.png'
 import { MyTooltip } from '@/components/MyTooltip'
 import { useUser } from '@/hooks/use-user'
+import { useModal } from '@/hooks/use-modal'
 
 type Params = {
   params: { user_id: string }
@@ -22,6 +23,8 @@ type Params = {
 
 export default function Dashboard({ params: { user_id } }: Params) {
   const { user } = useUser(user_id)
+
+  const { openAddCryptoModal } = useModal()
 
   if (!user) {
     return null
@@ -79,7 +82,9 @@ export default function Dashboard({ params: { user_id } }: Params) {
               <Image src={J1Svg} alt="" />
               My Wallet
             </span>
-            <button className="dashboard__button">+ Add crypto</button>
+            <button className="dashboard__button" onClick={openAddCryptoModal}>
+              + Add crypto
+            </button>
           </header>
           <table className="wallet-table__container">
             <thead>

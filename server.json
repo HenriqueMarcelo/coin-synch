@@ -1,4 +1,18 @@
 {
+  "wallets": [
+    {
+      "user_id": "1",
+      "crypto": "BTC",
+      "value": 61,
+      "id": 1
+    },
+    {
+      "user_id": "1",
+      "crypto": "ETH",
+      "value": 5,
+      "id": 2
+    }
+  ],
   "users": [
     {
       "name": "Marcelo Henrique da Silva Fonseca",

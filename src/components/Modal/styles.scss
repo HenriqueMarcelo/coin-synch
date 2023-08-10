@@ -88,12 +88,15 @@
   &__title {
     color: var(--text-base);
     text-align: center;
-    /* Regular/H4 */
-    font-family: Roboto;
+
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 133.333% */
+
+    &--bold {
+      font-weight: 700;
+    }
   }
 
   &__logo{

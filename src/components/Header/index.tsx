@@ -4,24 +4,15 @@ import Image from 'next/image'
 import './styles.scss'
 import HeaderLogoSvg from '@/assets/header-logo.svg'
 import { Marquee } from '../Marquee'
-import { useEffect, useState } from 'react'
-import { CryptoInfo } from '@/@types/crypto-info'
-import { getCryptos } from '@/api/cryptos'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Change } from '../Change'
 import { useModal } from '@/hooks/use-modal'
+import { useCryptos } from '@/hooks/use-cryptos'
 
 export function Header() {
-  const [cryptos, setCryptos] = useState<CryptoInfo[]>([])
-
   const { openSignUpModal, openSignInModal } = useModal()
 
-  useEffect(() => {
-    async function aux() {
-      setCryptos(await getCryptos())
-    }
-    aux()
-  }, [])
+  const { cryptos } = useCryptos()
 
   return (
     <header className="header__container container">
