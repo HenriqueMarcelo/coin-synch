@@ -37,43 +37,118 @@
   "crypto-change": [
     {
       "crypto": "BTC",
-      "change": 1.74
+      "change": 1.74,
+      "history": [
+        4.69,
+        6.53,
+        4.94,
+        2.72,
+        1.91
+      ]
     },
     {
       "crypto": "ETH",
-      "change": 1.39
+      "change": 1.39,
+      "history": [
+        5.29,
+        5.38,
+        6.73,
+        8.29,
+        9.69
+
+      ]
     },
     {
       "crypto": "USDT",
-      "change": 0.09
+      "change": 0.09,
+      "history": [
+        5.02,
+        1.9,
+        6.58,
+        4.2,
+        1.56
+
+      ]
     },
     {
       "crypto": "BNB",
-      "change": 0.57
+      "change": 0.57,
+      "history": [
+        5.42,
+        5.6,
+        1.27,
+        4.25,
+        4.98
+
+      ]
     },
     {
       "crypto": "XRP",
-      "change": 5.25
+      "change": 5.25,
+      "history": [
+        7.75,
+        4.44,
+        6.04,
+        6.92,
+        7.91
+      ]
     },
     {
       "crypto": "USDC",
-      "change": -0.04
+      "change": -0.04,
+      "history": [
+        1.66,
+        3.77,
+        8.12,
+        7.04,
+        3.11
+
+      ]
     },
     {
       "crypto": "DOGE",
-      "change": 2.43
+      "change": 2.43,
+      "history": [
+        8.6,
+        6.57,
+        2.34,
+        6.87,
+        2.63
+      ]
     },
     {
       "crypto": "ADA",
-      "change": 1.93
+      "change": 1.93,
+      "history": [
+        4.88,
+        8.69,
+        5.83,
+        1.92,
+        4.35
+
+      ]
     },
     {
       "crypto": "SOL",
-      "change": 6.15
+      "change": 6.15,
+      "history": [
+        4.69,
+        6.53,
+        4.94,
+        2.72,
+        1.91
+      ]
     },
     {
       "crypto": "TRX",
-      "change": -0.22
+      "change": -0.22,
+      "history": [
+        4.69,
+        6.53,
+        4.94,
+        2.72,
+        1.91
+      ]
     }
   ],
   "mock-coin": [
