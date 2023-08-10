@@ -99,6 +99,33 @@
     }
   }
 
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-base, #5D6670);
+    line-height: 16px; /* 150% */
+
+    text-align: center;
+  }
+
+  &__image {
+    margin-left: 24px;
+    margin-right: 8px;
+  }
+
+  &__acronym {
+      color: var(--gray-500, #8C8A97);
+      line-height: 24px;
+  }
+
+  &__label {
+    color: var(--text-base);
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   &__logo{
     font-family: Roboto;
     font-size: 24px;

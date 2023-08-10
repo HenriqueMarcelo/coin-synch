@@ -3,7 +3,7 @@
     {
       "user_id": "1",
       "crypto": "BTC",
-      "value": 61,
+      "value": 322.000001,
       "id": 1
     },
     {
@@ -11,12 +11,6 @@
       "crypto": "ETH",
       "value": 5,
       "id": 2
-    },
-    {
-      "user_id": "1",
-      "crypto": "USDT",
-      "value": 100,
-      "id": 3
     }
   ],
   "users": [

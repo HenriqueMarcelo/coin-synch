@@ -292,6 +292,17 @@
             color: var(--yellow-400);
         }
     }
+
+    &__label {
+        color: var(--secondary-400, #ACABB7);
+        // text-align: center;
+        /* Regular/Label */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+    }
 }
 
 .bold{

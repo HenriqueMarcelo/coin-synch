@@ -1,6 +1,8 @@
 import { AddCryptoModal } from '@/components/AddCryptoModal'
 import { SignInModal } from '@/components/SignInModal'
 import { SignUpModal } from '@/components/SignUpModal'
+import { TransferCryptoModal } from '@/components/TransferCryptoModal'
+import { CryptoUser } from '@/components/WalletCard'
 import { createContext, ReactNode, useState } from 'react'
 
 interface ModalContextType {
@@ -15,6 +17,10 @@ interface ModalContextType {
   isAddCryptoOpen: boolean
   openAddCryptoModal: () => void
   closeAddCryptoModal: () => void
+
+  isTransferCryptoOpen: boolean
+  openTransferCryptoModal: (cryptoUser: CryptoUser) => void
+  closeTransferCryptoModal: () => void
 }
 
 interface ModalProviderProps {
@@ -27,6 +33,8 @@ export function ModalProvider({ children }: ModalProviderProps) {
   const [isSignInOpen, setIsSignInOpen] = useState(false)
   const [isSignUpOpen, setIsSignUpOpen] = useState(false)
   const [isAddCryptoOpen, setIsAddCryptoOpen] = useState(false)
+  const [isTransferCryptoOpen, setIsTransferCryptoOpen] = useState(false)
+  const [transferCrypto, setTransferCrypto] = useState<CryptoUser | undefined>()
 
   function openSignInModal() {
     setIsSignInOpen(true)
@@ -52,6 +60,16 @@ export function ModalProvider({ children }: ModalProviderProps) {
     setIsAddCryptoOpen(false)
   }
 
+  function openTransferCryptoModal(cryptoUser: CryptoUser) {
+    setIsTransferCryptoOpen(true)
+    setTransferCrypto(cryptoUser)
+  }
+
+  function closeTransferCryptoModal() {
+    setIsTransferCryptoOpen(false)
+    setTransferCrypto(undefined)
+  }
+
   return (
     <ModalContext.Provider
       value={{
@@ -64,6 +82,9 @@ export function ModalProvider({ children }: ModalProviderProps) {
         isAddCryptoOpen,
         openAddCryptoModal,
         closeAddCryptoModal,
+        isTransferCryptoOpen,
+        openTransferCryptoModal,
+        closeTransferCryptoModal,
       }}
     >
       <SignInModal open={isSignInOpen} onOpenChange={setIsSignInOpen} />
@@ -71,6 +92,11 @@ export function ModalProvider({ children }: ModalProviderProps) {
       <AddCryptoModal
         open={isAddCryptoOpen}
         onOpenChange={setIsAddCryptoOpen}
+      />
+      <TransferCryptoModal
+        open={isTransferCryptoOpen}
+        onOpenChange={setIsTransferCryptoOpen}
+        cryptoUser={transferCrypto}
       />
       {children}
     </ModalContext.Provider>

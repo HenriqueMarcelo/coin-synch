@@ -13,7 +13,7 @@ import { Change } from '../Change'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
 
-type UserTable = {
+export type CryptoUser = {
   cryptoName: string
   cryptoCode: string
   cryptoImageUrl: string
@@ -24,8 +24,8 @@ type UserTable = {
 }
 
 export function WalletCard() {
-  const [userTable, setUserTable] = useState<UserTable[] | undefined>()
-  const { openAddCryptoModal } = useModal()
+  const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
+  const { openAddCryptoModal, openTransferCryptoModal } = useModal()
   const { cryptos } = useCryptos()
 
   const getUserTable = useCallback(
@@ -36,7 +36,7 @@ export function WalletCard() {
       const { data } = await apiJson.get<WalletInfo[]>(
         `/wallets?user_id=${userId}`,
       )
-      const userTable = [] as UserTable[]
+      const userTable = [] as CryptoUser[]
       for (const wallet of data) {
         const cryptoInfo = cryptos.find(
           (crypto) => crypto.code === wallet.crypto,
@@ -125,7 +125,7 @@ export function WalletCard() {
                 </td>
                 <td className="wallet-table__td">
                   <MyTooltip text="Transfer Crypto" side="bottom">
-                    <button>
+                    <button onClick={() => openTransferCryptoModal(userRow)}>
                       <Image src={TradeButtonSvg} alt="" />
                     </button>
                   </MyTooltip>
