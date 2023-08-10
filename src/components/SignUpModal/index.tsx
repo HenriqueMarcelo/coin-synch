@@ -9,6 +9,7 @@ import * as z from 'zod'
 import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
+import { apiJson } from '@/lib/axios'
 
 type Props = DialogProps
 
@@ -39,12 +40,10 @@ export function SignUpModal({ children, ...rest }: Props) {
     resolver: zodResolver(signUpSchema),
   })
 
-  async function onSubmit({ email, password }: SignUp) {
-    // simulando espera de 1 segundo
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    console.log(email, password)
-    reset()
+  async function onSubmit({ name, email, password }: SignUp) {
+    await apiJson.post('/users', { name, email, password })
 
+    reset()
     router.push('/dashboard')
   }
 

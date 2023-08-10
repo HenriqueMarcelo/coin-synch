@@ -9,6 +9,7 @@ import * as z from 'zod'
 import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
+import { apiJson } from '@/lib/axios'
 
 type Props = DialogProps
 
@@ -33,12 +34,17 @@ export function SignInModal({ children, ...rest }: Props) {
   })
 
   async function onSubmit({ email, password }: SignIn) {
-    // simulando espera de 1 segundo
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    console.log(email, password)
-    reset()
+    const { data } = await apiJson.get(
+      `/users?email=${email}&password=${password}`,
+    )
 
-    router.push('/dashboard')
+    if (data.length) {
+      const user = data[0]
+      router.push(`/dashboard/${user.id}`)
+    } else {
+      // todo toaster informando erro
+      reset()
+    }
   }
 
   function handleChangeModal() {
