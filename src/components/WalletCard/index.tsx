@@ -12,6 +12,7 @@ import { useCryptos } from '@/hooks/use-cryptos'
 import { Change } from '../Change'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
+import { useUserWallet } from '@/hooks/use-user-wallet'
 
 export type CryptoUser = {
   cryptoName: string
@@ -24,48 +25,9 @@ export type CryptoUser = {
 }
 
 export function WalletCard() {
-  const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
-  const { cryptos } = useCryptos()
 
-  const getUserTable = useCallback(
-    async (userId: string) => {
-      if (!cryptos.length) {
-        return undefined
-      }
-      const { data } = await apiJson.get<WalletInfo[]>(
-        `/wallets?user_id=${userId}`,
-      )
-      const userTable = [] as CryptoUser[]
-      for (const wallet of data) {
-        const cryptoInfo = cryptos.find(
-          (crypto) => crypto.code === wallet.crypto,
-        )
-        if (cryptoInfo) {
-          userTable.push({
-            cryptoChange: cryptoInfo.change,
-            cryptoCode: cryptoInfo.code,
-            cryptoImageUrl: cryptoInfo.imageUrl,
-            cryptoName: cryptoInfo.name,
-            value: cryptoInfo.priceUsd * wallet.value,
-            amount: wallet.value,
-          })
-        }
-      }
-
-      return userTable
-    },
-    [cryptos],
-  )
-
-  useEffect(() => {
-    async function aux() {
-      setUserTable(await getUserTable('1'))
-    }
-    aux()
-  }, [getUserTable])
-
-  console.log(userTable)
+  const { userTable } = useUserWallet('1')
 
   if (!userTable) {
     return null
