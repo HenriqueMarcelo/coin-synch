@@ -13,6 +13,9 @@ import Eduphants from '@/assets/Eduphants.png'
 
 import { useUser } from '@/hooks/use-user'
 import { WalletCard } from '@/components/WalletCard'
+import { useUserWallet } from '@/hooks/use-user-wallet'
+import { useMemo } from 'react'
+import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 
 type Params = {
   params: { user_id: string }
@@ -20,6 +23,18 @@ type Params = {
 
 export default function Dashboard({ params: { user_id } }: Params) {
   const { user } = useUser(user_id)
+  // todo fix user
+  const { userTable } = useUserWallet('1')
+
+  const balance = useMemo(() => {
+    const total = userTable?.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.amount
+    }, 0)
+    if (typeof total !== 'number') {
+      return 'Loading'
+    }
+    return convertNumberToUsd(Number(total))
+  }, [userTable])
 
   if (!user) {
     return null
@@ -36,7 +51,7 @@ export default function Dashboard({ params: { user_id } }: Params) {
               <span className="regular__body">(approximately)</span>
             </div>
           </div>
-          <div className="dashboard__price">$32,256.56</div>
+          <div className="dashboard__price">{balance}</div>
         </div>
 
         <div className="dashboard__card dashboard__card--mini">

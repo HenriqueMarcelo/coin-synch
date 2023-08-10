@@ -11,7 +11,7 @@ import { Select } from '../Select'
 import { WalletInfo } from '@/@types/wallet-info'
 import Image from 'next/image'
 import Image404Png from '@/assets/404.png'
-import { CryptoUser } from '../WalletCard'
+import { CryptoUser } from '@/hooks/use-user-wallet'
 
 type Props = DialogProps & {
   cryptoUser?: CryptoUser

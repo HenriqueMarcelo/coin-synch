@@ -2,7 +2,7 @@ import { AddCryptoModal } from '@/components/AddCryptoModal'
 import { SignInModal } from '@/components/SignInModal'
 import { SignUpModal } from '@/components/SignUpModal'
 import { TransferCryptoModal } from '@/components/TransferCryptoModal'
-import { CryptoUser } from '@/components/WalletCard'
+import { CryptoUser } from '@/hooks/use-user-wallet'
 import { createContext, ReactNode, useState } from 'react'
 
 interface ModalContextType {

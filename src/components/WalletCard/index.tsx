@@ -5,28 +5,15 @@ import TradeButtonSvg from '@/assets/TradeButton.svg'
 import J1Svg from '@/assets/j1.svg'
 import J2Svg from '@/assets/j2.svg'
 import { useModal } from '@/hooks/use-modal'
-import { useCallback, useEffect, useState } from 'react'
-import { WalletInfo } from '@/@types/wallet-info'
-import { apiJson } from '@/lib/axios'
-import { useCryptos } from '@/hooks/use-cryptos'
 import { Change } from '../Change'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
 import { useUserWallet } from '@/hooks/use-user-wallet'
 
-export type CryptoUser = {
-  cryptoName: string
-  cryptoCode: string
-  cryptoImageUrl: string
-  cryptoChange: number
-
-  value: number
-  amount: number
-}
-
 export function WalletCard() {
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
 
+  // todo fix user
   const { userTable } = useUserWallet('1')
 
   if (!userTable) {
