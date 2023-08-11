@@ -47,6 +47,7 @@ export function SignUpModal({ children, ...rest }: Props) {
   }
 
   function handleChangeModal() {
+    reset()
     openSignInModal()
     closeSignUpModal()
   }
@@ -115,9 +116,16 @@ export function SignUpModal({ children, ...rest }: Props) {
         <p className="modal-components__footer">
           Already have and account?{' '}
           <button type="button" onClick={handleChangeModal}>
-            <span className="modal-components__footer--bold"> Sign up to </span>
-            <span className="modal-components__footer--yellow">Coin</span>
-            <span className="modal-components__footer--gray">Synch</span>
+            <span className="modal-components__footer modal-components__footer--bold">
+              {' '}
+              Sign up to{' '}
+            </span>
+            <span className="modal-components__footer modal-components__footer--yellow">
+              Coin
+            </span>
+            <span className="modal-components__footer modal-components__footer--gray">
+              Synch
+            </span>
           </button>
         </p>
       </form>
