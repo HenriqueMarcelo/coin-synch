@@ -9,6 +9,9 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+        @media (max-width: 704px) {
+            justify-content: center;
+        }
     }
     &__image {
         width: 94px;
@@ -19,5 +22,9 @@
         color: var(--text-base);
         font-size: 14px;
         line-height: 16px; /* 114.286% */
+
+        @media (max-width: 704px) {
+            display: none;
+        }
     }
 }

@@ -3,6 +3,9 @@
         object-fit: cover;
         width: 100%;
         user-select: none;
+        @media (max-width: 704px) {
+            height: 180px;
+        }
     }
 }
 

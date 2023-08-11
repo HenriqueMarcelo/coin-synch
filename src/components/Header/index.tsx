@@ -8,6 +8,7 @@ import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Change } from '../Change'
 import { useModal } from '@/hooks/use-modal'
 import { useCryptos } from '@/hooks/use-cryptos'
+import { List } from '@phosphor-icons/react'
 
 export function Header() {
   const { openSignUpModal, openSignInModal } = useModal()
@@ -29,6 +30,9 @@ export function Header() {
           </div>
         </div>
         <div className="header__right">
+          <button className="header__button-menu">
+            <List size={14} />
+          </button>
           <div className="header__links">
             <Marquee>
               {cryptos.map((crypto) => (
