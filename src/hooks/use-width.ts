@@ -14,7 +14,6 @@ export function useWidth() {
     } else {
       setSize('xl')
     }
-    console.log(window.innerWidth)
   }
 
   // create an event listener

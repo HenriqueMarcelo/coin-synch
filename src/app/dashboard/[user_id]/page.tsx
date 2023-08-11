@@ -44,7 +44,7 @@ export default function Dashboard({ params: { user_id } }: Params) {
   return (
     <>
       <div className="container dashboard__row">
-        <div className="dashboard__card dashboard__card--mini">
+        <div className="dashboard__card dashboard__card--mini dashboard__card--full-tablet">
           <div className="dashboard__balance">
             <Image src={BalanceIconSvg} alt="" />
             <div>

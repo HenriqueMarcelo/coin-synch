@@ -7,6 +7,9 @@
         border-top: 1px solid var(--secondary-300, #E0DEEA);
         border-bottom: 1px solid var(--secondary-300, #E0DEEA);
         
+        @media (max-width: 1248px) {
+            display: none;
+        }
     }
 
     &__list {

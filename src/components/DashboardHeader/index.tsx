@@ -7,14 +7,18 @@ import { CaretDown, List } from '@phosphor-icons/react'
 import { MyPopover } from '../MyPopover'
 import { UserInfo } from '@/@types/user-info'
 import { getFirstAndLastWords } from '@/utils/get-frist-and-last-words'
+import { useWidth } from '@/hooks/use-width'
 
 type Props = {
   user: UserInfo
 }
 
 export function DashboardHeader({ user }: Props) {
+  const { size } = useWidth()
+  const containerClass = size !== 'xl' ? 'container' : ''
+
   return (
-    <header className="dashboard-header__container">
+    <header className={`dashboard-header__container ${containerClass}`}>
       <button className="dashboard-header__button">
         <List size={14} />
       </button>
