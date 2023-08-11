@@ -27,7 +27,7 @@ export default function Dashboard({ params: { user_id } }: Params) {
 
   const balance = useMemo(() => {
     const total = userTable?.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.amount
+      return accumulator + currentValue.value
     }, 0)
     if (typeof total !== 'number') {
       return 'Loading'

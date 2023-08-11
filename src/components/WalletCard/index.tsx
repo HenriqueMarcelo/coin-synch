@@ -35,7 +35,7 @@ export function WalletCard() {
           + Add crypto
         </button>
       </header>
-      {userTable ? (
+      {userTable.length ? (
         <table className="wallet-table__container">
           <thead>
             <tr>
