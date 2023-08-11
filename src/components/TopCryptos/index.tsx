@@ -9,6 +9,7 @@ import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { useState } from 'react'
+import { AccordionDemo } from '@/components/Accordion'
 
 export function TopCryptos() {
   const [showAll, setShowAll] = useState(false)
@@ -23,6 +24,9 @@ export function TopCryptos() {
   return (
     <section className="top__container container">
       <h1 className="top__title">Top Cryptos</h1>
+      <div className="home-table__mobile">
+        <AccordionDemo cryptos={cryptosList} />
+      </div>
       <table className="home-table__container">
         <thead>
           <tr>

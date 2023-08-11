@@ -19,7 +19,7 @@ export default function Home() {
         <Banner />
         <Image src={WavesPng} alt="" className="waves__image" />
         <HomeInfos />
-        {/* <TopCryptos /> */}
+        <TopCryptos />
         <Subscribe />
         <Footer />
       </main>
