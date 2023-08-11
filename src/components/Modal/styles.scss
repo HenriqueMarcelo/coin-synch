@@ -116,6 +116,14 @@
     line-height: 16px; /* 150% */
 
     text-align: center;
+
+    @media (max-width: 1248px) {
+      font-size: 14px;
+      img {
+          width: 24px;
+          height: 24px;
+      }
+  }
   }
 
   &__image {
@@ -124,7 +132,7 @@
   }
 
   &__acronym {
-      color: var(--gray-500, #8C8A97);
+      color: var(--gray-500);
       line-height: 24px;
   }
 

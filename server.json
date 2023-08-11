@@ -11,6 +11,12 @@
       "crypto": "DOGE",
       "value": 7,
       "id": 2
+    },
+    {
+      "user_id": "1",
+      "crypto": "BTC",
+      "value": 1,
+      "id": 3
     }
   ],
   "users": [

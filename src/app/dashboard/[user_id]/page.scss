@@ -220,22 +220,14 @@
     }
 
     &__acronym {
-        color: var(--gray-500, #8C8A97);
-        /* Regular/body */
-        font-family: Roboto;
+        color: var(--gray-500);
         font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 24px;
     }
 
     &__small {
-        color: var(--gray-500, #8C8A97);
-        /* Regular/label */
-        font-family: Roboto;
+        color: var(--gray-500);
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 16px; /* 114.286% */
 
         padding: 0 24px;
@@ -326,13 +318,13 @@
 
     &__label {
         color: var(--secondary-400, #ACABB7);
-        // text-align: center;
-        /* Regular/Label */
-        font-family: Roboto;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 16px; /* 114.286% */
+
+        @media (max-width: 1248px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 }
 
