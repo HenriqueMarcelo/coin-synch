@@ -18,7 +18,7 @@ export default function Home() {
         <Header />
         <Banner />
         <Image src={WavesPng} alt="" className="waves__image" />
-        {/* <HomeInfos /> */}
+        <HomeInfos />
         {/* <TopCryptos /> */}
         <Subscribe />
         <Footer />

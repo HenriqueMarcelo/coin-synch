@@ -6,13 +6,15 @@ import Info3Png from '@/assets/info-3.png'
 import Info4Png from '@/assets/info-4.png'
 import { useModal } from '@/hooks/use-modal'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 export function HomeInfos() {
   const { openSignUpModal } = useModal()
 
   return (
     <section className="infos__full">
       <div className="infos__container container">
-        <div className="infos_box">
+        <div className="infos__box">
           <div className="infos__row infos__row--top">
             <div className="info__container">
               <Image src={Info1Png} alt="" className="info__image" />
@@ -53,6 +55,54 @@ export function HomeInfos() {
               </p>
             </div>
           </div>
+        </div>
+        <div className="infos__mobile">
+          <Swiper className="mySwiper" slidesPerView={1.3} loop={true}>
+            <SwiperSlide>
+              <div className="info__container">
+                <Image src={Info1Png} alt="" className="info__image" />
+                <h3 className="info__small">For your company</h3>
+                <h2 className="info__title">Crypto Solutions</h2>
+                <p className="info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam,
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="info__container">
+                <Image src={Info2Png} alt="" className="info__image" />
+                <h3 className="info__small">For your company</h3>
+                <h2 className="info__title">Crypto Solutions</h2>
+                <p className="info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam,
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="info__container">
+                <Image src={Info3Png} alt="" className="info__image" />
+                <h3 className="info__small">For your company</h3>
+                <h2 className="info__title">Crypto Solutions</h2>
+                <p className="info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam,
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="info__container">
+                <Image src={Info4Png} alt="" className="info__image" />
+                <h3 className="info__small">For your company</h3>
+                <h2 className="info__title">Crypto Solutions</h2>
+                <p className="info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam,
+                </p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div>
           <h3 className="infos__small">Lorem ipsum</h3>
