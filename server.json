@@ -2,14 +2,14 @@
   "wallets": [
     {
       "user_id": "1",
-      "crypto": "BTC",
-      "value": 1,
+      "crypto": "SOL",
+      "value": 5,
       "id": 1
     },
     {
       "user_id": "1",
-      "crypto": "ETH",
-      "value": 2,
+      "crypto": "DOGE",
+      "value": 7,
       "id": 2
     }
   ],
