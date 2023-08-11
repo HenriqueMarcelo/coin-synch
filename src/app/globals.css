@@ -88,8 +88,8 @@ button[disabled] {
   /* background: lightblue; */
 }
 .container:nth-child(2) {
-  background: lightgreen;
+  /* background: lightgreen; */
 }
 .container:nth-child(3) {
-  background: lightcoral;
+  /* background: lightcoral; */
 }

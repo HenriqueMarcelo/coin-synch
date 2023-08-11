@@ -2,39 +2,57 @@
     &__full {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
         padding: 120px 0 130px;
+        
+        @media (max-width: 1248px) {
+            padding: 80px 0;
+        }
     }
     &__container {
         display: flex;
         gap: 32px;
+
+        @media (max-width: 1248px) {
+            flex-wrap: wrap-reverse;
+            gap: 40px;
+        }
     }
     &__small {
         color: var(--yellow-500);
         font-size: 20px;
         font-weight: 700;
         line-height: 32px;
+
+        @media (max-width: 1248px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     &__title {
         color: var(--text-base, #5D6670);
         
-        font-family: Roboto;
         font-size: 40px;
-        font-style: normal;
         font-weight: 700;
         line-height: 48px; 
         letter-spacing: -0.4px;
 
         margin-bottom: 16px;
+
+        @media (max-width: 1248px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
     &__text {
         color: var(--text-base, #5D6670);
 
-        font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 24px;
 
         margin-bottom: 40px;
+
+        @media (max-width: 1248px) {
+            margin-bottom: 0px;
+        }
     }
     &__button {
         display: flex;
@@ -46,7 +64,7 @@
         gap: 10px;
 
         border-radius: 32px;
-        background: var(--yellow-500, #FBAB34);
+        background: var(--yellow-500);
         
         
         color: #FFF;
@@ -56,21 +74,31 @@
         &:hover {
             background-color: var(--yellow-600);
         }
+
+        @media (max-width: 1248px) {
+            display: none;
+        }
     }
 
     &__row {
         display: flex;
         gap: 32px;
 
+        @media (max-width: 1248px) {
+            gap: 24px;
+        }
+
         &--top{
-            // justify-content: flex-start;
             margin-bottom: 32px;
             padding-right: 132px;
+            
+            @media (max-width: 1248px) {
+                margin-bottom: 24px;
+            }
         }
         &--bottom{
             padding-left: 132px;
             justify-content: flex-end;
-
         }
     }
 }
@@ -98,23 +126,18 @@
         line-height: 24px;
     }
     &__title {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
         
-        font-family: Roboto;
         font-size: 24px;
-        font-style: normal;
         font-weight: 700;
         line-height: 32px;
 
         margin-bottom: 8px;
     }
     &__text {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
 
-        font-family: Roboto;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 24px;
     }
 }
