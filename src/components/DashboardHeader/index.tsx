@@ -3,9 +3,10 @@
 import Image from 'next/image'
 import HeaderLogoSvg from '@/assets/header-logo.svg'
 import './styles.scss'
-import { CaretDown } from '@phosphor-icons/react'
+import { CaretDown, List } from '@phosphor-icons/react'
 import { MyPopover } from '../MyPopover'
 import { UserInfo } from '@/@types/user-info'
+import { getFirstAndLastWords } from '@/utils/get-frist-and-last-words'
 
 type Props = {
   user: UserInfo
@@ -14,6 +15,9 @@ type Props = {
 export function DashboardHeader({ user }: Props) {
   return (
     <header className="dashboard-header__container">
+      <button className="dashboard-header__button">
+        <List size={14} />
+      </button>
       <div className="dashboard-header__left">
         <Image src={HeaderLogoSvg} alt="" />
       </div>
@@ -26,7 +30,7 @@ export function DashboardHeader({ user }: Props) {
             alt=""
             className="dashboard-header__image"
           />
-          {user.name}
+          {getFirstAndLastWords(user.name)}
           <CaretDown className="dashboard-header__icon" size={16} />
         </button>
       </MyPopover>
