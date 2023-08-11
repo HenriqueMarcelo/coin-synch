@@ -1,7 +1,8 @@
 .banner {
     &__container {
         display: flex;
-        padding: 56px 0;
+        padding-top: 56px;
+        padding-bottom: 56px;
         align-items: center;
         gap: 138px;
     }

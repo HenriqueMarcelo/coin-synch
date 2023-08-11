@@ -15,43 +15,62 @@ export function Header() {
   const { cryptos } = useCryptos()
 
   return (
-    <header className="header__container container">
-      <div className="header__left">
-        <Image src={HeaderLogoSvg} alt="" />
-        <div className="header__links">
-          <a href="" className="header__link">
-            About us
-          </a>
-          <a href="" className="header__link">
-            Top Cryptos
-          </a>
+    <>
+      <header className="header__container container">
+        <div className="header__left">
+          <Image src={HeaderLogoSvg} alt="" />
+          <div className="header__links">
+            <a href="" className="header__link">
+              About us
+            </a>
+            <a href="" className="header__link">
+              Top Cryptos
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="header__right">
-        <div className="header__links">
-          <Marquee>
-            {cryptos.map((crypto) => (
-              <div className="header__tag" key={crypto.code}>
-                <span className="header__text header__text--dark">
-                  {crypto.code}
-                </span>
-                <span className="header__text">
-                  {convertNumberToUsd(crypto.priceUsd)}{' '}
-                </span>
-                <span className="header__text">
-                  <Change value={crypto.change} />
-                </span>
-              </div>
-            ))}
-          </Marquee>
-          <button className="header__link" onClick={openSignInModal}>
-            Sign In
-          </button>
-          <button className="header__button" onClick={openSignUpModal}>
-            Sign Up
-          </button>
+        <div className="header__right">
+          <div className="header__links">
+            <Marquee>
+              {cryptos.map((crypto) => (
+                <div className="header__tag" key={crypto.code}>
+                  <span className="header__text header__text--dark">
+                    {crypto.code}
+                  </span>
+                  <span className="header__text">
+                    {convertNumberToUsd(crypto.priceUsd)}{' '}
+                  </span>
+                  <span className="header__text">
+                    <Change value={crypto.change} />
+                  </span>
+                </div>
+              ))}
+            </Marquee>
+            <button className="header__link" onClick={openSignInModal}>
+              Sign In
+            </button>
+            <button className="header__button" onClick={openSignUpModal}>
+              Sign Up
+            </button>
+          </div>
         </div>
+      </header>
+      <div className="header__marquee">
+        <Marquee>
+          {cryptos.map((crypto) => (
+            <div className="header__tag" key={crypto.code}>
+              <span className="header__text header__text--dark">
+                {crypto.code}
+              </span>
+              <span className="header__text">
+                {convertNumberToUsd(crypto.priceUsd)}{' '}
+              </span>
+              <span className="header__text">
+                <Change value={crypto.change} />
+              </span>
+            </div>
+          ))}
+        </Marquee>
       </div>
-    </header>
+    </>
   )
 }

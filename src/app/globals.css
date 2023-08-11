@@ -46,6 +46,10 @@
   --red-900: #3B0C0E;
 
   --text-base: #5D6670;
+
+  --sm: '632px';
+  --md: '704px';
+  --xl: '1248px';
 }
 
 * {
@@ -78,4 +82,14 @@ button {
 
 button[disabled] {
   cursor: not-allowed;
+}
+
+.container:nth-child(1) {
+  /* background: lightblue; */
+}
+.container:nth-child(2) {
+  background: lightgreen;
+}
+.container:nth-child(3) {
+  background: lightcoral;
 }
