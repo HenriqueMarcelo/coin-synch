@@ -20,7 +20,7 @@ export default function Home() {
         <Image src={WavesPng} alt="" className="waves__image" />
         <HomeInfos />
         <TopCryptos />
-        {/* <Subscribe /> */}
+        <Subscribe />
         <Footer />
       </main>
     </ModalProvider>
