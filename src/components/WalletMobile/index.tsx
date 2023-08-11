@@ -1,7 +1,5 @@
+import './styles.scss'
 import Image from 'next/image'
-import { MyTooltip } from '../MyTooltip'
-
-import TradeButtonSvg from '@/assets/TradeButton.svg'
 import J1Svg from '@/assets/j1.svg'
 import J2Svg from '@/assets/j2.svg'
 import { useModal } from '@/hooks/use-modal'
@@ -35,54 +33,54 @@ export function WalletMobile() {
           + <span>Add crypto</span>
         </button>
       </header>
+
       {userTable.length ? (
-        <table className="wallet-table__container">
-          <thead>
-            <tr>
-              <th className="wallet-table__th">#</th>
-              <th className="wallet-table__th">Crypto</th>
-              <th className="wallet-table__th">Holdings</th>
-              <th className="wallet-table__th">Change</th>
-              <th className="wallet-table__th">Trade</th>
-            </tr>
-          </thead>
-          <tbody>
-            {userTable.map((userRow, index) => (
-              <tr className="wallet-table__tr" key={userRow.cryptoCode}>
-                <td className="wallet-table__small">0{index + 1}</td>
-                <td className="wallet-table__td">
-                  <Image
-                    src={userRow.cryptoImageUrl || Image404Png}
-                    alt={userRow.cryptoCode}
-                    width={32}
-                    height={32}
-                    className="wallet-table__image"
-                  />
+        <div className="wallet-mobile__container container">
+          {userTable.map((userRow) => (
+            <div
+              className="dashboard__card dashboard__card--mini"
+              key={userRow.cryptoCode}
+            >
+              <div className="wallet-mobile__header">
+                <Image
+                  src={userRow.cryptoImageUrl || Image404Png}
+                  alt={userRow.cryptoCode}
+                  width={32}
+                  height={32}
+                  className="wallet-mobile__image"
+                />
+                <span>
                   {userRow.cryptoName}{' '}
-                  <span className="wallet-table__acronym">
+                  <span className="wallet-mobile__acronym">
                     {userRow.cryptoCode}
                   </span>
-                </td>
-                <td className="wallet-table__td">
-                  {convertNumberToUsd(userRow.value)} <br />
-                  <span className="wallet-table__down">
-                    {userRow.amount} {userRow.cryptoCode}
-                  </span>
-                </td>
-                <td className="wallet-table__td">
+                </span>
+              </div>
+              <div className="wallet-mobile__body">
+                <span className="regular__small-label">Holdings</span> <br />
+                <span className="regular__label regular__label--text-base">
+                  {convertNumberToUsd(userRow.value)}
+                </span>
+                <br />
+                <span className="regular__small-label regular__small-label--yellow">
+                  {userRow.amount} {userRow.cryptoCode}
+                </span>
+                <hr className="wallet-mobile__hr" />
+                <span className="regular__small-label">Change</span> <br />
+                <span className="regular__label ">
                   <Change value={userRow.cryptoChange} percentage />
-                </td>
-                <td className="wallet-table__td">
-                  <MyTooltip text="Transfer Crypto" side="bottom">
-                    <button onClick={() => openTransferCryptoModal(userRow)}>
-                      <Image src={TradeButtonSvg} alt="" />
-                    </button>
-                  </MyTooltip>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </span>{' '}
+                <br />
+                <button
+                  className="wallet-mobile__button"
+                  onClick={() => openTransferCryptoModal(userRow)}
+                >
+                  Trade
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       ) : (
         <div className="empty__container">
           <Image src={J2Svg} alt="" />

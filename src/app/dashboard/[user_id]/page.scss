@@ -232,7 +232,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 16px; /* 114.286% */
-        
+
         @media (max-width: 704px) {
             font-size: 12px;
             line-height: 14px;
@@ -391,13 +391,22 @@
     }
 
     &__label {
-        color: var(--secondary-400, #ACABB7);
+        color: var(--gray-400);
         font-size: 14px;
         line-height: 16px; /* 114.286% */
+        
+        &--text-base {
+            color: var(--text-base);
+
+        }
 
         @media (max-width: 1248px) {
             font-size: 12px;
             line-height: 14px;
+        }
+        @media (max-width: 704px) {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 }

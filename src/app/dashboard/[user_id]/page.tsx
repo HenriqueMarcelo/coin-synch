@@ -15,6 +15,7 @@ import { Chart } from '@/components/Chart'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { Change } from '@/components/Change'
 import { WalletMobile } from '@/components/WalletMobile'
+import { useWidth } from '@/hooks/use-width'
 
 type Params = {
   params: { user_id: string }
@@ -23,6 +24,7 @@ type Params = {
 export default function Dashboard({ params: { user_id } }: Params) {
   const { cryptos } = useCryptos()
   const { user } = useUser(user_id)
+  const { size } = useWidth()
   // todo fix user
   const { userTable } = useUserWallet('1')
 
@@ -99,7 +101,7 @@ export default function Dashboard({ params: { user_id } }: Params) {
         </div>
       </div>
       <div className="container">
-        <WalletMobile />
+        {size === 'sm' ? <WalletMobile /> : <WalletCard />}
       </div>
     </>
   )

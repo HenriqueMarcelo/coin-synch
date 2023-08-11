@@ -1,0 +1,68 @@
+.wallet-mobile {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        & > .dashboard__card {
+            min-width: calc(50% - 8px);
+            flex-grow: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        background-color: var(--yellow-100);
+        padding: 16px 13px;
+
+        color: var(--text-base);
+        font-size: 12px;
+        line-height: 14px; /* 150% */
+
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    &__image {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    &__acronym {
+        color: var(--gray-500);
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    &__body {
+        padding: 16px;
+    }
+
+    &__hr {
+        border: 1px solid var(--gray-200);
+        margin: 16px 0;
+    }
+
+    &__button {
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 32px;
+        background: var(--yellow-500);
+
+        color: #FFF;
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px; /* 114.286% */
+
+        margin-top: 16px;
+        width: 100%;
+        
+        &:hover {
+            background-color: var(--yellow-600);
+        }
+    }
+}
