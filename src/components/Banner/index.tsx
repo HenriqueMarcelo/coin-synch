@@ -10,7 +10,7 @@ export function Banner() {
 
   return (
     <section className="container banner__container">
-      <div className="banner__left">
+      <article className="banner__left">
         <h2 className="banner__title">Lorem ipsum</h2>
         <p className="banner__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
@@ -27,8 +27,9 @@ export function Banner() {
           <span className="banner__tag">NFTs</span>
           <span className="banner__tag">Games</span>
         </div>
-      </div>
+      </article>
       <Slider />
+      <Slider imageWidth={298} />
     </section>
   )
 }

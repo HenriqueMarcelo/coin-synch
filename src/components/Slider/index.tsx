@@ -9,7 +9,10 @@ import Carousel1Png from '@/assets/carousel-1.png'
 import Carousel2Png from '@/assets/carousel-2.png'
 import Carousel3Png from '@/assets/carousel-3.png'
 
-export function Slider() {
+type Props = {
+  imageWidth?: number
+}
+export function Slider({ imageWidth }: Props) {
   return (
     <Swiper
       className="mySwiper"
@@ -22,13 +25,13 @@ export function Slider() {
       modules={[Autoplay]}
     >
       <SwiperSlide>
-        <Image src={Carousel1Png} alt="" />
+        <Image src={Carousel1Png} width={imageWidth} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={Carousel2Png} alt="" />
+        <Image src={Carousel2Png} width={imageWidth} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={Carousel3Png} alt="" />
+        <Image src={Carousel3Png} width={imageWidth} alt="" />
       </SwiperSlide>
     </Swiper>
   )

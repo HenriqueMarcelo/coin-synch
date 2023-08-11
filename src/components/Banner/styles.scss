@@ -5,34 +5,51 @@
         padding-bottom: 56px;
         align-items: center;
         gap: 138px;
+
+        @media (max-width: 1248px) {
+            gap: 48px;
+        }
     }
 
     &__left {
         flex: 1 0 590px;
+
+        @media (max-width: 1248px) {
+            flex: 1 0 320px;
+        }
     }
     
     &__title {
         color: var(--yellow-500);
         
-        font-family: Roboto;
         font-size: 48px;
-        font-style: normal;
         font-weight: 700;
         line-height: 56px; /* 116.667% */
         letter-spacing: -0.48px;
 
         margin-bottom: 24px;
+
+        @media (max-width: 1248px) {
+            font-size: 32px;
+            line-height: 40px; /* 125% */
+
+            margin-bottom: 16px;
+        }
     }
     &__text {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
 
-        font-family: Roboto;
         font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 32px; /* 160% */
 
         margin-bottom: 32px;
+
+        @media (max-width: 1248px) {
+            font-size: 16px;
+            line-height: 24px;
+
+            margin-bottom: 24px;
+        }
     }
     &__button {
         display: flex;
@@ -51,10 +68,7 @@
         text-align: center;
 
         
-        /* Bold/body */
-        font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
         font-weight: 700;
         line-height: 24px; /* 150% */
 
@@ -63,11 +77,21 @@
         &:hover {
             background-color: var(--yellow-600);
         }
+
+        @media (max-width: 1248px) {
+            padding: 12px;
+
+            margin-bottom: 40px;
+        }
     }
 
     &__tags {
         display: flex;
         gap: 32px;
+
+        @media (max-width: 1248px) {
+            gap: 24px;
+        }
     }
 
     &__tag {
@@ -76,15 +100,29 @@
         align-items: flex-start;
 
         border-radius: 4px;
-        background: var(--yellow-100, #FFF6E8);
+        background: var(--yellow-100);
 
-        color: var(--primary-500, #FBAB34);
+        color: var(--yellow-500);
         text-align: center;
-        /* Regular/H5 */
-        font-family: Roboto;
         font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 32px; /* 160% */
+
+        @media (max-width: 1248px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.swiper:nth-of-type(1) {
+    @media (max-width: 1248px) {
+        display: none;
+    }
+}
+
+.swiper:nth-of-type(2) {
+    display: none;
+    @media (max-width: 1248px) {
+        display: block;
     }
 }
