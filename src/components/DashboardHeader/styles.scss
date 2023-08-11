@@ -40,6 +40,11 @@
         text-align: right;
         font-size: 14px;
         line-height: 16px; /* 114.286% */
+        @media (max-width: 704px) {
+            span {
+                display: none;
+            }
+        }
     }
 
     &__image {

@@ -14,6 +14,7 @@ import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Chart } from '@/components/Chart'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { Change } from '@/components/Change'
+import { WalletMobile } from '@/components/WalletMobile'
 
 type Params = {
   params: { user_id: string }
@@ -47,9 +48,13 @@ export default function Dashboard({ params: { user_id } }: Params) {
         <div className="dashboard__card dashboard__card--mini dashboard__card--full-tablet">
           <div className="dashboard__balance">
             <Image src={BalanceIconSvg} alt="" />
-            <div>
+            <div className="hide__mobile">
               <h4 className="regular__h4">Balance in US$</h4>
               <span className="regular__body">(approximately)</span>
+            </div>
+            <div className="show__mobile">
+              <h4 className="regular__h4">Balance </h4>
+              <span className="regular__body">in US$</span>
             </div>
           </div>
           <div className="dashboard__price">{balance}</div>
@@ -94,7 +99,7 @@ export default function Dashboard({ params: { user_id } }: Params) {
         </div>
       </div>
       <div className="container">
-        <WalletCard />
+        <WalletMobile />
       </div>
     </>
   )

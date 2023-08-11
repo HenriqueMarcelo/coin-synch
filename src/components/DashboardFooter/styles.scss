@@ -17,6 +17,11 @@
             padding-top: 20px;
             padding-bottom: 20px;   
         }
+        @media (max-width: 704px) {
+            justify-content: center;
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
     &__image {
         width: 94px;
@@ -26,6 +31,9 @@
         display: none;
         @media (max-width: 1248px) {
             display: block;
+        }
+        @media (max-width: 704px) {
+            display: none;
         }
     }
 }

@@ -34,7 +34,7 @@ export function DashboardHeader({ user }: Props) {
             alt=""
             className="dashboard-header__image"
           />
-          {getFirstAndLastWords(user.name)}
+          <span>{getFirstAndLastWords(user.name)}</span>
           <CaretDown className="dashboard-header__icon" size={16} />
         </button>
       </MyPopover>

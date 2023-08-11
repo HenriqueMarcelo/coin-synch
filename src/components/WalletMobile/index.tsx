@@ -10,7 +10,7 @@ import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
 import { useUserWallet } from '@/hooks/use-user-wallet'
 
-export function WalletCard() {
+export function WalletMobile() {
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
 
   // todo fix user
@@ -21,7 +21,7 @@ export function WalletCard() {
   }
 
   return (
-    <section className="dashboard__card">
+    <section className="">
       <header className="dashboard__header">
         <span className="dashboard__title">
           <Image src={J1Svg} alt="" />
@@ -32,10 +32,9 @@ export function WalletCard() {
           className="dashboard__button"
           onClick={openAddCryptoModal}
         >
-          + Add crypto
+          + <span>Add crypto</span>
         </button>
       </header>
-      {/* {userTable.length ? ( */}
       {userTable.length ? (
         <table className="wallet-table__container">
           <thead>

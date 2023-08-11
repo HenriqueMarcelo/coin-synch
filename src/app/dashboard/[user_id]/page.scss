@@ -12,6 +12,10 @@
             @media (max-width: 1248px) {
                 flex-grow: 1;
             }
+            @media (max-width: 704px) {
+                flex-direction: column;
+                width: 40%;
+            }
         }
 
         &--full-tablet {
@@ -19,7 +23,12 @@
                 width: 100%;
                 margin-bottom: 0;
             }
+            @media (max-width: 704px) {
+                flex-direction: row;
+            }
         }
+
+        
     }
 
     &__row {
@@ -27,6 +36,9 @@
         gap: 32px;
         @media (max-width: 1248px) {
             flex-wrap: wrap;
+        }
+        @media (max-width: 704px) {
+            gap: 24px ;
         }
     }
 
@@ -50,6 +62,12 @@
             font-size: 24px;
             line-height: 32px;
         }
+        @media (max-width: 704px) {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 12px;
+        }
+        
     }
 
     &__balance {
@@ -57,8 +75,17 @@
         align-items: center;
         gap: 16px;
         padding: 24px;
+
         @media (max-width: 1248px) {
             padding: 16px;
+        }
+        
+        @media (max-width: 704px) {
+            padding: 8px 16px;
+            img {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 
@@ -73,6 +100,11 @@
         justify-content: space-between;
 
         gap: 16px;
+
+        & + img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__acronym {
@@ -91,6 +123,9 @@
                 height: 24px;
             }
         }
+        @media (max-width: 704px) {
+            margin: 11px 0 8px;
+        }
     }
 
     &__header {
@@ -99,6 +134,9 @@
         justify-content: space-between;
 
         border-bottom: 1px solid var(--gray-200);
+        @media (max-width: 704px) {
+            border-top: 1px solid var(--gray-300);
+        }
     }
     &__title {
         color: var(--text-base, #5D6670);
@@ -113,6 +151,15 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @media (max-width: 704px) {
+            font-size: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
     &__button {
         display: inline-flex;
@@ -136,6 +183,13 @@
         &:hover {
             background-color: var(--yellow-600);
         }
+
+        @media (max-width: 704px) {
+            padding: 8px 12px;
+            span {
+                display: none;
+            }
+        }
     }
 }
 
@@ -150,6 +204,9 @@
         @media (max-width: 1248px) {
             padding: 80px;
         }
+        @media (max-width: 704px) {
+            padding: 40px;
+        }
     }
     &__title {
         color: var(--text-base, #5D6670);
@@ -162,16 +219,24 @@
         line-height: 32px; /* 160% */
 
         margin-top: 24px;
+
+        @media (max-width: 704px) {
+            margin-top: 16px;
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
     &__text {
         color: var(--text-base, #5D6670);
         text-align: center;
-        /* Regular/label */
-        font-family: Roboto;
         font-size: 14px;
-        font-style: normal;
         font-weight: 400;
         line-height: 16px; /* 114.286% */
+        
+        @media (max-width: 704px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 }
 
@@ -269,6 +334,10 @@
         @media (max-width: 1248px) {
             font-size: 20px;
         }
+        @media (max-width: 704px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
     &__body {
         color: var(--gray-500, #8C8A97);
@@ -314,6 +383,11 @@
         &--yellow {
             color: var(--yellow-400);
         }
+
+        @media (max-width: 704px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 
     &__label {
@@ -337,5 +411,18 @@
         line-height: 16px; /* 114.286% */
 
         white-space: nowrap;
+    }
+}
+
+.show__mobile {
+    display: none;
+    @media (max-width: 704px) {
+        display: block;
+    }
+}
+
+.hide__mobile {
+    @media (max-width: 704px) {
+        display: none;
     }
 }
