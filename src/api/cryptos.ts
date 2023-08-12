@@ -16,19 +16,16 @@ type CryptoDataAPI = {
 }
 
 export async function getCryptos() {
-  // const topCryptos = await apiJson.get<string[]>('top-cryptos')
-  // const topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
-  //   `assets/${topCryptos.data}`,
-  // )
+  let topCryptosData
+  if (process.env.NEXT_PUBLIC_API_KEY) {
+    const topCryptos = await apiJson.get<string[]>('top-cryptos')
+    topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
+      `assets/${topCryptos.data}`,
+    )
+  } else {
+    topCryptosData = await apiJson.get<CryptoDataAPI[]>(`mock-coin`)
+  }
 
-  /*
-   * O código comentado abaixo pega os dados do dev-server
-   * assim não fica enviando requisições desnecessárias
-   * para o serviço de API real.
-   *
-   * Deve ser utilizado apenas em Desenvolvimento!
-   */
-  const topCryptosData = await apiJson.get<CryptoDataAPI[]>(`mock-coin`)
   const allCryptosChange = await apiJson.get<CryptoChangeAPI[]>('crypto-change')
 
   const topCryptosList = topCryptosData.data.map((cryptoData) => {

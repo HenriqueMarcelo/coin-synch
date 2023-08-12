@@ -14,7 +14,7 @@ import { LoaderLine } from '../LoaderLine'
 import { useLoader } from '@/hooks/use-loader'
 
 export function Header() {
-  const { openSignUpModal, openSignInModal, openToaster } = useModal()
+  const { openSignUpModal, openSignInModal } = useModal()
   const { toggle } = useMenu()
   const { cryptos } = useCryptos()
   const { shown } = useLoader()
@@ -26,7 +26,6 @@ export function Header() {
   return (
     <>
       {shown && <LoaderLine />}
-      <button onClick={() => openToaster('aaa')}>Abrir Toaster</button>
 
       <header className="header__container container">
         <div className="header__left">

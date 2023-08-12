@@ -16,7 +16,7 @@ import { useLoader } from '@/hooks/use-loader'
 type Props = DialogProps
 
 export function SignInModal({ children, ...rest }: Props) {
-  const { closeSignInModal, openSignUpModal } = useModal()
+  const { closeSignInModal, openSignUpModal, openToaster } = useModal()
   const router = useRouter()
   const { showLoader, hideLoader } = useLoader()
 
@@ -47,9 +47,10 @@ export function SignInModal({ children, ...rest }: Props) {
       router.push(`/dashboard/${user.id}`)
     } else {
       // todo toaster informando erro
+      openToaster('User not found.')
       reset()
+      hideLoader()
     }
-    hideLoader()
   }
 
   function handleChangeModal() {

@@ -6,8 +6,10 @@ import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { apiJson } from '@/lib/axios'
 import { useLoader } from '@/hooks/use-loader'
+import { useModal } from '@/hooks/use-modal'
 
 export function Subscribe() {
+  const { openToaster } = useModal()
   const { showLoader, hideLoader } = useLoader()
   const subscribeSchema = z.object({
     email: z.string().email(),
@@ -26,13 +28,17 @@ export function Subscribe() {
 
   async function onSubmit({ email }: Subscribe) {
     showLoader()
-    await apiJson.post('newsletter', {
-      email,
-    })
-    hideLoader()
-    reset()
-
-    // todo criar um toast de feedback
+    try {
+      await apiJson.post('newsletter', {
+        email,
+      })
+      openToaster('Email successfully registered.')
+    } catch {
+      openToaster('Some error has happened.')
+    } finally {
+      hideLoader()
+      reset()
+    }
   }
 
   return (

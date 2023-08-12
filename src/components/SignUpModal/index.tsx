@@ -14,7 +14,7 @@ import { useLoader } from '@/hooks/use-loader'
 type Props = DialogProps
 
 export function SignUpModal({ children, ...rest }: Props) {
-  const { closeSignUpModal, openSignInModal } = useModal()
+  const { closeSignUpModal, openSignInModal, openToaster } = useModal()
   const { showLoader, hideLoader } = useLoader()
 
   const signUpSchema = z
@@ -42,11 +42,18 @@ export function SignUpModal({ children, ...rest }: Props) {
 
   async function onSubmit({ name, email, password }: SignUp) {
     showLoader()
-    await apiJson.post('/users', { name, email, password })
-    hideLoader()
+    try {
+      await apiJson.post('/users', { name, email, password })
 
-    reset()
-    closeSignUpModal()
+      reset()
+      closeSignUpModal()
+      openToaster('Email successfully registered.')
+    } catch {
+      openToaster('Some error has happened.')
+    } finally {
+      hideLoader()
+    }
+
     // todo toaster de confirmação
   }
 

@@ -17,6 +17,12 @@
       "crypto": "DOGE",
       "value": 1000,
       "id": 3
+    },
+    {
+      "user_id": "3",
+      "crypto": "BTC",
+      "value": 19,
+      "id": 4
     }
   ],
   "users": [
@@ -37,12 +43,36 @@
       "email": "marcelo.fonseca@digital2b.com.br",
       "password": "2@9WSFEjgak5y",
       "id": 3
+    },
+    {
+      "name": "Marcelo",
+      "email": "admin@demo.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "Marcelo Henrique",
+      "email": "admin@demo.com",
+      "password": "12",
+      "id": 5
     }
   ],
   "newsletter": [
     {
       "email": "teste@teste.com",
       "id": 1
+    },
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 2
+    },
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 3
+    },
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 4
     }
   ],
   "top-cryptos": [

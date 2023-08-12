@@ -104,7 +104,7 @@ export function ModalProvider({ children }: ModalProviderProps) {
         openToaster,
       }}
     >
-      <ToastProvider swipeDirection="right">
+      <ToastProvider swipeDirection="right" duration={3000}>
         <SignInModal open={isSignInOpen} onOpenChange={setIsSignInOpen} />
         <SignUpModal open={isSignUpOpen} onOpenChange={setIsSignUpOpen} />
         <AddCryptoModal

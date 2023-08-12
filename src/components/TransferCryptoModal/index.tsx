@@ -121,6 +121,7 @@ export function TransferCryptoModal({
           <Select
             disabled={isSubmitting}
             error={!!errors.transfer}
+            required
             {...register('transfer')}
           >
             <option value="" disabled>

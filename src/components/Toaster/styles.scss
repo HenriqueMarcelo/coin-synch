@@ -1,7 +1,4 @@
 /* reset */
-button {
-  all: unset;
-}
 
 .ToastViewport {
   --viewport-padding: 25px;
@@ -27,8 +24,8 @@ button {
   column-gap: 15px;
   align-items: center;
 
-  background-color: var(--green-100);
-  color: var(--green-800);
+  background-color: var(--yellow-100);
+  color: var(--yellow-800);
 }
 .ToastRoot[data-state='open'] {
   animation: slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
