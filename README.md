@@ -3,8 +3,8 @@
 - [x] Corrigir overflow do marquee
 - [x] Select color
 - [x] Favicon
-- [ ] Header chrome android
-- [ ] Corrigir imagens das cryptos
+- [x] Header chrome android
+- [x] Corrigir imagens das cryptos
 - [ ] Loadings
 - [ ] Docs
 - [ ] user hook

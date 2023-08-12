@@ -1,5 +1,5 @@
 import { CryptoInfo } from '@/@types/crypto-info'
-import { /* apiCoin, */ apiJson } from '@/lib/axios'
+import { apiCoin, apiJson } from '@/lib/axios'
 import { iconsLinks } from '@/storage/icons-links'
 
 type AllCryptosPossible = keyof typeof iconsLinks
@@ -16,10 +16,10 @@ type CryptoDataAPI = {
 }
 
 export async function getCryptos() {
-  //   const topCryptos = await apiJson.get<string[]>('top-cryptos')
-  //   const topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
-  //     `assets/${topCryptos.data}`,
-  //   )
+  // const topCryptos = await apiJson.get<string[]>('top-cryptos')
+  // const topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
+  //   `assets/${topCryptos.data}`,
+  // )
   const topCryptosData = await apiJson.get<CryptoDataAPI[]>(`mock-coin`)
   const allCryptosChange = await apiJson.get<CryptoChangeAPI[]>('crypto-change')
 
