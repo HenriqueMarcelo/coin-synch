@@ -9,13 +9,14 @@ import Eduphants from '@/assets/Eduphants.png'
 import { useUser } from '@/hooks/use-user'
 import { WalletCard } from '@/components/WalletCard'
 import { useUserWallet } from '@/hooks/use-user-wallet'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import { Chart } from '@/components/Chart'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { Change } from '@/components/Change'
 import { WalletMobile } from '@/components/WalletMobile'
 import { useWidth } from '@/hooks/use-width'
+import { useModal } from '@/hooks/use-modal'
 
 type Params = {
   params: { user_id: string }
@@ -25,8 +26,13 @@ export default function Dashboard({ params: { user_id } }: Params) {
   const { cryptos } = useCryptos()
   const { user } = useUser(user_id)
   const { size } = useWidth()
-  // todo fix user
-  const { userTable } = useUserWallet('1')
+  const { userTable } = useUserWallet(user_id)
+  const { setUserId } = useModal()
+
+  useEffect(() => {
+    setUserId(user_id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user_id])
 
   const balance = useMemo(() => {
     const total = userTable?.reduce((accumulator, currentValue) => {
@@ -104,7 +110,11 @@ export default function Dashboard({ params: { user_id } }: Params) {
         )}
       </div>
       <div className="container">
-        {size === 'sm' ? <WalletMobile /> : <WalletCard />}
+        {size === 'sm' ? (
+          <WalletMobile userId={user_id} />
+        ) : (
+          <WalletCard userId={user_id} />
+        )}
       </div>
     </>
   )

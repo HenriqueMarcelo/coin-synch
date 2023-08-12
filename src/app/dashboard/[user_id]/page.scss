@@ -19,6 +19,7 @@
         }
 
         &--full-tablet {
+            flex-grow: 1;
             @media (max-width: 1248px) {
                 width: 100%;
                 margin-bottom: 0;

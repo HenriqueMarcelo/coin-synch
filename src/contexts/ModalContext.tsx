@@ -21,6 +21,8 @@ interface ModalContextType {
   isTransferCryptoOpen: boolean
   openTransferCryptoModal: (cryptoUser: CryptoUser) => void
   closeTransferCryptoModal: () => void
+
+  setUserId: (userId: string) => void
 }
 
 interface ModalProviderProps {
@@ -35,6 +37,8 @@ export function ModalProvider({ children }: ModalProviderProps) {
   const [isAddCryptoOpen, setIsAddCryptoOpen] = useState(false)
   const [isTransferCryptoOpen, setIsTransferCryptoOpen] = useState(false)
   const [transferCrypto, setTransferCrypto] = useState<CryptoUser | undefined>()
+
+  const [userId, setUserId] = useState('')
 
   function openSignInModal() {
     setIsSignInOpen(true)
@@ -85,6 +89,7 @@ export function ModalProvider({ children }: ModalProviderProps) {
         isTransferCryptoOpen,
         openTransferCryptoModal,
         closeTransferCryptoModal,
+        setUserId,
       }}
     >
       <SignInModal open={isSignInOpen} onOpenChange={setIsSignInOpen} />
@@ -92,11 +97,13 @@ export function ModalProvider({ children }: ModalProviderProps) {
       <AddCryptoModal
         open={isAddCryptoOpen}
         onOpenChange={setIsAddCryptoOpen}
+        userId={userId}
       />
       <TransferCryptoModal
         open={isTransferCryptoOpen}
         onOpenChange={setIsTransferCryptoOpen}
         cryptoUser={transferCrypto}
+        userId={userId}
       />
       {children}
     </ModalContext.Provider>

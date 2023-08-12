@@ -12,15 +12,24 @@ import { WalletInfo } from '@/@types/wallet-info'
 import Image from 'next/image'
 import Image404Png from '@/assets/404.png'
 import { CryptoUser } from '@/hooks/use-user-wallet'
+import { useLoader } from '@/hooks/use-loader'
+import { useModal } from '@/hooks/use-modal'
 
 type Props = DialogProps & {
   cryptoUser?: CryptoUser
+  userId: string
 }
 
 const MIN_VALUE = 0.000001
 
-export function TransferCryptoModal({ children, cryptoUser, ...rest }: Props) {
-  const userId = '1' // todo
+export function TransferCryptoModal({
+  children,
+  cryptoUser,
+  userId,
+  ...rest
+}: Props) {
+  const { hideLoader, showLoader } = useLoader()
+  const { closeTransferCryptoModal } = useModal()
 
   const signInSchema = z.object({
     transfer: z.enum(['in', 'out', '']),
@@ -46,6 +55,7 @@ export function TransferCryptoModal({ children, cryptoUser, ...rest }: Props) {
   const transferValue = watch('transfer')
 
   async function onSubmit({ transfer, value }: SignIn) {
+    showLoader()
     const { data } = await apiJson.get<WalletInfo[]>(
       `/wallets?user_id=${userId}&crypto=${cryptoUser?.cryptoCode}`,
     )
@@ -71,9 +81,10 @@ export function TransferCryptoModal({ children, cryptoUser, ...rest }: Props) {
     }
 
     reset()
-    // closeTransferCryptoModal()
+    closeTransferCryptoModal()
+    hideLoader()
 
-    // todo ver alguma forma melhor de fazer reload
+    // todo - recarregar página sem reload
     location.reload()
   }
 

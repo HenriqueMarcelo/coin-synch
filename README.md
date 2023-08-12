@@ -6,16 +6,15 @@
 - [x] Header chrome android
 - [x] Corrigir imagens das cryptos
 - [x] Loadings
-- [ ] corrigir tamanho do modal
-- [ ] Levar em conta o usuário certo na hora de buscar o dashboard
-- [ ] tirar delay da api
-- [ ] Docs
-- [ ] change API example to Real
+- [x] corrigir tamanho do modal
+- [x] Levar em conta o usuário certo na hora de buscar o dashboard
 - [ ] API key in .env
-- [ ] Test example
+- [ ] change API example to Real
+- [ ] tirar delay da api
 - [ ] Feedback toast
 
-- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads
+- [ ] Docs
+- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads/tests
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

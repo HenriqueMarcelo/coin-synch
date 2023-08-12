@@ -11,13 +11,16 @@ import { apiJson } from '@/lib/axios'
 import { Select } from '../Select'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { WalletInfo } from '@/@types/wallet-info'
+import { useLoader } from '@/hooks/use-loader'
 
-type Props = DialogProps
+type Props = DialogProps & {
+  userId: string
+}
 
-export function AddCryptoModal({ children, ...rest }: Props) {
+export function AddCryptoModal({ children, userId, ...rest }: Props) {
+  const { hideLoader, showLoader } = useLoader()
   const { closeAddCryptoModal } = useModal()
   const { cryptos } = useCryptos()
-  const userId = '1' // todo
 
   const signInSchema = z.object({
     crypto: z.string().nonempty(),
@@ -40,6 +43,7 @@ export function AddCryptoModal({ children, ...rest }: Props) {
   })
 
   async function onSubmit({ crypto, value }: SignIn) {
+    showLoader()
     const { data } = await apiJson.get<WalletInfo[]>(
       `/wallets?user_id=${userId}&crypto=${crypto}`,
     )
@@ -58,8 +62,9 @@ export function AddCryptoModal({ children, ...rest }: Props) {
     }
     reset()
     closeAddCryptoModal()
+    hideLoader()
 
-    // todo ver alguma forma melhor de fazer reload
+    // todo - recarregar página sem reload
     location.reload()
   }
 

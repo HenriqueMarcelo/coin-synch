@@ -10,11 +10,15 @@ import { convertNumberToUsd } from '@/utils/convert-number-to-USD'
 import Image404Png from '@/assets/404.png'
 import { useUserWallet } from '@/hooks/use-user-wallet'
 
-export function WalletCard() {
+type Props = {
+  userId: string
+}
+
+export function WalletCard({ userId }: Props) {
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
 
   // todo fix user
-  const { userTable } = useUserWallet('1')
+  const { userTable } = useUserWallet(userId)
 
   if (!userTable) {
     return null

@@ -30,8 +30,6 @@ export function LoaderContextProvider({
     setAuxCount((state) => state - 1)
   }
 
-  console.log(auxCount, shown)
-
   // function toggle() {
   //   setShown((val) => {
   //     return !val

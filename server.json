@@ -1,5 +1,18 @@
 {
-  "wallets": [],
+  "wallets": [
+    {
+      "user_id": "1",
+      "crypto": "BTC",
+      "value": 1,
+      "id": 1
+    },
+    {
+      "user_id": "2",
+      "crypto": "ETH",
+      "value": 9,
+      "id": 2
+    }
+  ],
   "users": [
     {
       "name": "Marcelo Henrique da Silva Fonseca",
@@ -8,7 +21,7 @@
       "id": 1
     },
     {
-      "name": "Marcelo Henrique da Silva Fonseca",
+      "name": "Ricardo Silva Souza",
       "email": "admin@demo.com",
       "password": "123",
       "id": 2
