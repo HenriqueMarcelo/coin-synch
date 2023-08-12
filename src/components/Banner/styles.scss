@@ -39,6 +39,10 @@
         @media (max-width: 1248px) {
             flex: 1 0 320px;
         }
+
+        @media (max-width: 300px) {
+            flex: 1 1 320px;
+        }
     }
     
     &__title {
