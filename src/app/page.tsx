@@ -11,7 +11,7 @@ import { Footer } from '@/components/Footer'
 import { Banner } from '@/components/Banner'
 import { ModalProvider } from '@/contexts/ModalContext'
 import { MenuContextProvider } from '@/contexts/MenuContext'
-import { MenuAside } from '@/components/MenuAside'
+import { MenuHomeMobile } from '@/components/MenuHomeMobile'
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           <TopCryptos />
           <Subscribe />
           <Footer />
-          <MenuAside side="left">Lorem ipsum,</MenuAside>
+          <MenuHomeMobile />
         </main>
       </MenuContextProvider>
     </ModalProvider>

@@ -8,18 +8,20 @@ import { MyPopover } from '../MyPopover'
 import { UserInfo } from '@/@types/user-info'
 import { getFirstAndLastWords } from '@/utils/get-frist-and-last-words'
 import { useWidth } from '@/hooks/use-width'
+import { useMenu } from '@/hooks/use-menu'
 
 type Props = {
   user: UserInfo
 }
 
 export function DashboardHeader({ user }: Props) {
+  const { toggle } = useMenu()
   const { size } = useWidth()
   const containerClass = size !== 'xl' ? 'container' : ''
 
   return (
     <header className={`dashboard-header__container ${containerClass}`}>
-      <button className="dashboard-header__button">
+      <button className="dashboard-header__button" onClick={toggle}>
         <List size={14} />
       </button>
       <div className="dashboard-header__left">

@@ -1,4 +1,6 @@
-- [ ] Mobile Menus
+- [x] Mobile Menus
+- [ ] Corrigir navegação do menu
+- [ ] Corrigir overflow do marquee
 - [ ] Loadings
 - [ ] Select color
 - [ ] Favicon
