@@ -17,7 +17,6 @@ type Props = {
 export function WalletCard({ userId }: Props) {
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
 
-  // todo fix user
   const { userTable } = useUserWallet(userId)
 
   if (!userTable) {
@@ -39,7 +38,6 @@ export function WalletCard({ userId }: Props) {
           + Add crypto
         </button>
       </header>
-      {/* {userTable.length ? ( */}
       {userTable.length ? (
         <table className="wallet-table__container">
           <thead>

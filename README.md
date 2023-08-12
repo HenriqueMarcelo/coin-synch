@@ -10,10 +10,13 @@
 - [x] Levar em conta o usuário certo na hora de buscar o dashboard
 - [x] API key in .env
 - [x] tirar delay da api
-- [ ] change API example to Real
+- [x] change API example to Real
+- [ ] usuário login feadback
 
 - [ ] Docs
-- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads/tests/toast
+- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/
+Skeleton screens/reloads/tests/toast/banner slider/api sem endpoits/
+troca de modal/
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

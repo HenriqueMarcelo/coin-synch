@@ -2,55 +2,47 @@
   "wallets": [
     {
       "user_id": "1",
-      "crypto": "BTC",
-      "value": 1,
+      "crypto": "DOT",
+      "value": 5,
       "id": 1
     },
     {
       "user_id": "2",
-      "crypto": "ETH",
-      "value": 9,
+      "crypto": "BTC",
+      "value": 1,
       "id": 2
     },
     {
       "user_id": "2",
-      "crypto": "DAI",
-      "value": 0.01,
+      "crypto": "DOGE",
+      "value": 1000,
       "id": 3
-    },
-    {
-      "user_id": "2",
-      "crypto": "USDT",
-      "value": 0.000004,
-      "id": 4
     }
   ],
   "users": [
     {
-      "name": "Marcelo Henrique da Silva Fonseca",
-      "email": "admin@demo.com",
+      "name": "Marcelo Fonseca",
+      "email": "teste@teste.com",
       "password": "123",
       "id": 1
     },
     {
-      "name": "Ricardo Silva Souza",
+      "name": "Marcelo",
       "email": "admin@demo.com",
       "password": "123",
       "id": 2
+    },
+    {
+      "name": "Marcelo",
+      "email": "marcelo.fonseca@digital2b.com.br",
+      "password": "2@9WSFEjgak5y",
+      "id": 3
     }
   ],
   "newsletter": [
     {
-      "email": "teste@dtopublicidade.com.br",
+      "email": "teste@teste.com",
       "id": 1
-    },
-    {
-      "email": "teste@dtopublicidade.com.br",
-      "id": 2
-    },
-    {
-      "email": "teste@dtopublicidade.com.br",
-      "id": 3
     }
   ],
   "top-cryptos": [

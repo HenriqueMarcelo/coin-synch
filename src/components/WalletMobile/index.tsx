@@ -15,7 +15,6 @@ type Props = {
 export function WalletMobile({ userId }: Props) {
   const { openAddCryptoModal, openTransferCryptoModal } = useModal()
 
-  // todo fix user
   const { userTable } = useUserWallet(userId)
 
   if (!userTable) {

@@ -1,9 +1,7 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
-
-// Import Swiper styles
 import 'swiper/css'
+
 import Image from 'next/image'
 import Carousel1Png from '@/assets/carousel-1.png'
 import Carousel2Png from '@/assets/carousel-2.png'

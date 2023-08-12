@@ -9,8 +9,6 @@ if (process.env.API_KEY) {
   API_KEY = '15D675AC-4887-4157-9037-3D8E175454C9'
 }
 
-console.log(API_KEY)
-
 export const apiCoin = axios.create({
   baseURL: 'https://rest.coinapi.io/v1',
 })

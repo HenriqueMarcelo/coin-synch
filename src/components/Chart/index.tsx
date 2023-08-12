@@ -57,7 +57,6 @@ export function Chart({ history }: Props) {
         borderColor: '#AD721A',
         backgroundColor: '#FFE1B5',
         tension: 0.3,
-        //   fill: true,
       },
     ],
   }

@@ -8,7 +8,7 @@ export function Marquee({ children }: Props) {
     <div className="marquee">
       <div className="track">
         <div className="content">
-          {/* Tem que ser duplicado para a animação ficar com efeito de loop */}
+          {/* Precisa ser duplicado para a animação ficar com efeito de loop */}
           {children}
           {children}
         </div>

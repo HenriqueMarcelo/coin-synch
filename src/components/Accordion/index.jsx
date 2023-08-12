@@ -38,12 +38,7 @@ AccordionTrigger.displayName = 'AccordionTrigger'
 AccordionContent.displayName = 'AccordionContent'
 
 export const AccordionDemo = ({ cryptos }) => (
-  <Accordion.Root
-    className="AccordionRoot"
-    // type="single"
-    // defaultValue="item-1"
-    collapsible
-  >
+  <Accordion.Root className="AccordionRoot" collapsible>
     {cryptos.map((crypto) => (
       <Accordion.Item
         className="AccordionItem"
