@@ -6,6 +6,7 @@
 - [x] Header chrome android
 - [x] Corrigir imagens das cryptos
 - [ ] Loadings
+- [ ] tirar delay da api
 - [ ] Docs
 - [ ] user hook
 - [ ] change API example to Real
