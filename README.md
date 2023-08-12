@@ -8,7 +8,7 @@
 - [x] Loadings
 - [x] corrigir tamanho do modal
 - [x] Levar em conta o usuário certo na hora de buscar o dashboard
-- [ ] API key in .env
+- [x] API key in .env
 - [ ] change API example to Real
 - [ ] tirar delay da api
 - [ ] Feedback toast
