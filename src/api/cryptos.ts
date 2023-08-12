@@ -16,10 +16,10 @@ type CryptoDataAPI = {
 }
 
 export async function getCryptos() {
-  const topCryptos = await apiJson.get<string[]>('top-cryptos')
-  const topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
-    `assets/${topCryptos.data}`,
-  )
+  // const topCryptos = await apiJson.get<string[]>('top-cryptos')
+  // const topCryptosData = await apiCoin.get<CryptoDataAPI[]>(
+  //   `assets/${topCryptos.data}`,
+  // )
 
   /*
    * O código comentado abaixo pega os dados do dev-server
@@ -28,7 +28,7 @@ export async function getCryptos() {
    *
    * Deve ser utilizado apenas em Desenvolvimento!
    */
-  // const topCryptosData = await apiJson.get<CryptoDataAPI[]>(`mock-coin`)
+  const topCryptosData = await apiJson.get<CryptoDataAPI[]>(`mock-coin`)
   const allCryptosChange = await apiJson.get<CryptoChangeAPI[]>('crypto-change')
 
   const topCryptosList = topCryptosData.data.map((cryptoData) => {

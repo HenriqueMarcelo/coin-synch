@@ -1,8 +1,10 @@
 import { AddCryptoModal } from '@/components/AddCryptoModal'
 import { SignInModal } from '@/components/SignInModal'
 import { SignUpModal } from '@/components/SignUpModal'
+import Toaster from '@/components/Toaster'
 import { TransferCryptoModal } from '@/components/TransferCryptoModal'
 import { CryptoUser } from '@/hooks/use-user-wallet'
+import { Provider as ToastProvider } from '@radix-ui/react-toast'
 import { createContext, ReactNode, useState } from 'react'
 
 interface ModalContextType {
@@ -23,6 +25,8 @@ interface ModalContextType {
   closeTransferCryptoModal: () => void
 
   setUserId: (userId: string) => void
+
+  openToaster: (text: string) => void
 }
 
 interface ModalProviderProps {
@@ -37,6 +41,8 @@ export function ModalProvider({ children }: ModalProviderProps) {
   const [isAddCryptoOpen, setIsAddCryptoOpen] = useState(false)
   const [isTransferCryptoOpen, setIsTransferCryptoOpen] = useState(false)
   const [transferCrypto, setTransferCrypto] = useState<CryptoUser | undefined>()
+  const [isToastOpen, setIsToastOpen] = useState(false)
+  const [toastContent, setToastContent] = useState('')
 
   const [userId, setUserId] = useState('')
 
@@ -74,6 +80,11 @@ export function ModalProvider({ children }: ModalProviderProps) {
     setTransferCrypto(undefined)
   }
 
+  function openToaster(text: string) {
+    setToastContent(text)
+    setIsToastOpen(true)
+  }
+
   return (
     <ModalContext.Provider
       value={{
@@ -90,22 +101,28 @@ export function ModalProvider({ children }: ModalProviderProps) {
         openTransferCryptoModal,
         closeTransferCryptoModal,
         setUserId,
+        openToaster,
       }}
     >
-      <SignInModal open={isSignInOpen} onOpenChange={setIsSignInOpen} />
-      <SignUpModal open={isSignUpOpen} onOpenChange={setIsSignUpOpen} />
-      <AddCryptoModal
-        open={isAddCryptoOpen}
-        onOpenChange={setIsAddCryptoOpen}
-        userId={userId}
-      />
-      <TransferCryptoModal
-        open={isTransferCryptoOpen}
-        onOpenChange={setIsTransferCryptoOpen}
-        cryptoUser={transferCrypto}
-        userId={userId}
-      />
-      {children}
+      <ToastProvider swipeDirection="right">
+        <SignInModal open={isSignInOpen} onOpenChange={setIsSignInOpen} />
+        <SignUpModal open={isSignUpOpen} onOpenChange={setIsSignUpOpen} />
+        <AddCryptoModal
+          open={isAddCryptoOpen}
+          onOpenChange={setIsAddCryptoOpen}
+          userId={userId}
+        />
+        <TransferCryptoModal
+          open={isTransferCryptoOpen}
+          onOpenChange={setIsTransferCryptoOpen}
+          cryptoUser={transferCrypto}
+          userId={userId}
+        />
+        <Toaster open={isToastOpen} onOpenChange={setIsToastOpen}>
+          {toastContent}
+        </Toaster>
+        {children}
+      </ToastProvider>
     </ModalContext.Provider>
   )
 }
