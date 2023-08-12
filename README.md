@@ -9,12 +9,11 @@
 - [x] corrigir tamanho do modal
 - [x] Levar em conta o usuário certo na hora de buscar o dashboard
 - [x] API key in .env
+- [x] tirar delay da api
 - [ ] change API example to Real
-- [ ] tirar delay da api
-- [ ] Feedback toast
 
 - [ ] Docs
-- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads/tests
+- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads/tests/toast
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

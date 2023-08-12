@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev-server": "json-server server.json --watch --delay 500 --port 3005",
+    "dev-server": "json-server server.json --watch --port 3005",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
