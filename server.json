@@ -1,15 +1,33 @@
 {
-  "wallets": [
-  ],
+  "wallets": [],
   "users": [
     {
       "name": "Marcelo Henrique da Silva Fonseca",
       "email": "admin@demo.com",
       "password": "123",
       "id": 1
+    },
+    {
+      "name": "Marcelo Henrique da Silva Fonseca",
+      "email": "admin@demo.com",
+      "password": "123",
+      "id": 2
     }
   ],
-  "newsletter": [],
+  "newsletter": [
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 1
+    },
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 2
+    },
+    {
+      "email": "teste@dtopublicidade.com.br",
+      "id": 3
+    }
+  ],
   "top-cryptos": [
     "BTC",
     "ETH",
@@ -146,10 +164,10 @@
       "data_trade_start": "2010-07-17T00:00:00.0000000Z",
       "data_trade_end": "2023-08-11T00:00:00.0000000Z",
       "data_symbols_count": 160191,
-      "volume_1hrs_usd": 81606311057929184.70,
-      "volume_1day_usd": 1932932169441369995.12,
-      "volume_1mth_usd": 134645210144522803316.47,
-      "price_usd": 29407.292948501130677904115552,
+      "volume_1hrs_usd": 81606311057929180,
+      "volume_1day_usd": 1932932169441370000,
+      "volume_1mth_usd": 134645210144522800000,
+      "price_usd": 29407.29294850113,
       "id_icon": "4caf2b16-a017-4e26-a348-2cea69c34cba",
       "data_start": "2010-07-17",
       "data_end": "2023-08-11"
@@ -168,7 +186,7 @@
       "volume_1hrs_usd": 948851121.73,
       "volume_1day_usd": 17811082218.11,
       "volume_1mth_usd": 22613560284626.54,
-      "price_usd": 83.66773931354310883913182893,
+      "price_usd": 83.66773931354311,
       "id_icon": "a201762f-1499-41ef-9b84-e0742cd00e48",
       "data_start": "2013-05-19",
       "data_end": "2023-08-11"
@@ -184,10 +202,10 @@
       "data_trade_start": "2013-11-25T00:00:00.0000000Z",
       "data_trade_end": "2023-08-11T00:00:00.0000000Z",
       "data_symbols_count": 6595,
-      "volume_1hrs_usd": 332852259.10,
+      "volume_1hrs_usd": 332852259.1,
       "volume_1day_usd": 8988776266.95,
       "volume_1mth_usd": 401072424357.36,
-      "price_usd": 0.6286956982625652360561403591,
+      "price_usd": 0.6286956982625652,
       "id_icon": "ba90bcb0-cafb-4801-ac5d-d310f47d6411",
       "data_start": "2013-11-25",
       "data_end": "2023-08-11"
@@ -203,10 +221,10 @@
       "data_trade_start": "2013-12-27T00:00:00.0000000Z",
       "data_trade_end": "2023-08-11T00:00:00.0000000Z",
       "data_symbols_count": 138007,
-      "volume_1hrs_usd": 1074581217404123410.37,
-      "volume_1day_usd": 14305328481801767176.74,
-      "volume_1mth_usd": 459663532194779064503.91,
-      "price_usd": 0.9994030181350207923711744466,
+      "volume_1hrs_usd": 1074581217404123400,
+      "volume_1day_usd": 14305328481801767000,
+      "volume_1mth_usd": 459663532194779040000,
+      "price_usd": 0.9994030181350207,
       "id_icon": "5ed65416-963e-4e57-998a-3c302da8936e",
       "data_start": "2013-12-27",
       "data_end": "2023-08-11"
@@ -224,8 +242,8 @@
       "data_symbols_count": 5391,
       "volume_1hrs_usd": 3180773377.15,
       "volume_1day_usd": 69799498434.88,
-      "volume_1mth_usd": 12287367462221420.65,
-      "price_usd": 0.0769572198405405857675143861,
+      "volume_1mth_usd": 12287367462221420,
+      "price_usd": 0.07695721984054059,
       "id_icon": "63e240f3-047f-41c7-9179-6784bc719f63",
       "data_start": "2014-02-21",
       "data_end": "2023-08-11"
@@ -241,10 +259,10 @@
       "data_trade_start": "2015-08-07T00:00:00.0000000Z",
       "data_trade_end": "2023-08-11T00:00:00.0000000Z",
       "data_symbols_count": 127101,
-      "volume_1hrs_usd": 208386870929660.79,
-      "volume_1day_usd": 3631535121189399.25,
-      "volume_1mth_usd": 3900299167402294307.27,
-      "price_usd": 1851.9879968657877265394143157,
+      "volume_1hrs_usd": 208386870929660.78,
+      "volume_1day_usd": 3631535121189399,
+      "volume_1mth_usd": 3900299167402294300,
+      "price_usd": 1851.9879968657876,
       "id_icon": "604ae453-3d9f-4ad0-9a48-9905cce617c2",
       "data_start": "2015-08-07",
       "data_end": "2023-08-11"
@@ -263,7 +281,7 @@
       "volume_1hrs_usd": 10811703.54,
       "volume_1day_usd": 302650845.11,
       "volume_1mth_usd": 13345162237.63,
-      "price_usd": 5.0270806435921104812155986425,
+      "price_usd": 5.02708064359211,
       "id_icon": "b9afd327-327a-435c-8044-8040e8d4a2eb",
       "data_start": "2017-02-19",
       "data_end": "2023-08-11"
@@ -282,7 +300,7 @@
       "volume_1hrs_usd": 7964152.51,
       "volume_1day_usd": 829895815.37,
       "volume_1mth_usd": 53926263720.73,
-      "price_usd": 0.0774676150175851831162691801,
+      "price_usd": 0.07746761501758519,
       "id_icon": "2fb39015-430a-4945-a645-8407b6c0fdc5",
       "data_start": "2017-09-23",
       "data_end": "2023-08-11"
@@ -301,7 +319,7 @@
       "volume_1hrs_usd": 6777242.77,
       "volume_1day_usd": 323119812.51,
       "volume_1mth_usd": 24205443206.47,
-      "price_usd": 0.293568782750175998675482039,
+      "price_usd": 0.293568782750176,
       "id_icon": "2701173b-1b77-40f2-8693-9659359e225c",
       "data_start": "2017-09-29",
       "data_end": "2023-08-11"
@@ -320,7 +338,7 @@
       "volume_1hrs_usd": 5102432.26,
       "volume_1day_usd": 77390461.07,
       "volume_1mth_usd": 2768880546.16,
-      "price_usd": 1.0000786133479493783514062469,
+      "price_usd": 1.0000786133479493,
       "id_icon": "890d6254-8c71-4bdf-a28a-e41761918aa0",
       "data_start": "2017-12-28",
       "data_end": "2023-08-11"

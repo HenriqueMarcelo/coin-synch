@@ -5,8 +5,10 @@ import './styles.scss'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { apiJson } from '@/lib/axios'
+import { useLoader } from '@/hooks/use-loader'
 
 export function Subscribe() {
+  const { showLoader, hideLoader } = useLoader()
   const subscribeSchema = z.object({
     email: z.string().email(),
   })
@@ -23,9 +25,11 @@ export function Subscribe() {
   })
 
   async function onSubmit({ email }: Subscribe) {
+    showLoader()
     await apiJson.post('newsletter', {
       email,
     })
+    hideLoader()
     reset()
 
     // todo criar um toast de feedback

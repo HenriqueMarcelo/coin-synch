@@ -9,25 +9,29 @@ import { TopCryptos } from '@/components/TopCryptos'
 import { Subscribe } from '@/components/Subscribe'
 import { Footer } from '@/components/Footer'
 import { Banner } from '@/components/Banner'
+import { MenuHomeMobile } from '@/components/MenuHomeMobile'
+
 import { ModalProvider } from '@/contexts/ModalContext'
 import { MenuContextProvider } from '@/contexts/MenuContext'
-import { MenuHomeMobile } from '@/components/MenuHomeMobile'
+import { LoaderContextProvider } from '@/contexts/LoaderContext'
 
 export default function Home() {
   return (
-    <ModalProvider>
-      <MenuContextProvider>
-        <main>
-          <Header />
-          <Banner />
-          <Image src={WavesPng} alt="" className="waves__image" />
-          <HomeInfos />
-          <TopCryptos />
-          <Subscribe />
-          <Footer />
-          <MenuHomeMobile />
-        </main>
-      </MenuContextProvider>
-    </ModalProvider>
+    <LoaderContextProvider>
+      <ModalProvider>
+        <MenuContextProvider>
+          <main>
+            <Header />
+            <Banner />
+            <Image src={WavesPng} alt="" className="waves__image" />
+            <HomeInfos />
+            <TopCryptos />
+            <Subscribe />
+            <Footer />
+            <MenuHomeMobile />
+          </main>
+        </MenuContextProvider>
+      </ModalProvider>
+    </LoaderContextProvider>
   )
 }

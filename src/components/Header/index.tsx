@@ -10,11 +10,14 @@ import { useModal } from '@/hooks/use-modal'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { List } from '@phosphor-icons/react'
 import { useMenu } from '@/hooks/use-menu'
+import { LoaderLine } from '../LoaderLine'
+import { useLoader } from '@/hooks/use-loader'
 
 export function Header() {
   const { openSignUpModal, openSignInModal } = useModal()
   const { toggle } = useMenu()
   const { cryptos } = useCryptos()
+  const { shown } = useLoader()
 
   function handleToggleMenu() {
     toggle()
@@ -22,6 +25,8 @@ export function Header() {
 
   return (
     <>
+      {shown && <LoaderLine />}
+
       <header className="header__container container">
         <div className="header__left">
           <Image src={HeaderLogoSvg} alt="" />

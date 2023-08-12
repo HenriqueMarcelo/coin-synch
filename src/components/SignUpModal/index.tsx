@@ -9,11 +9,13 @@ import * as z from 'zod'
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
 import { apiJson } from '@/lib/axios'
+import { useLoader } from '@/hooks/use-loader'
 
 type Props = DialogProps
 
 export function SignUpModal({ children, ...rest }: Props) {
   const { closeSignUpModal, openSignInModal } = useModal()
+  const { showLoader, hideLoader } = useLoader()
 
   const signUpSchema = z
     .object({
@@ -39,7 +41,9 @@ export function SignUpModal({ children, ...rest }: Props) {
   })
 
   async function onSubmit({ name, email, password }: SignUp) {
+    showLoader()
     await apiJson.post('/users', { name, email, password })
+    hideLoader()
 
     reset()
     closeSignUpModal()

@@ -11,12 +11,14 @@ import { DialogProps } from '@radix-ui/react-dialog'
 import { useModal } from '@/hooks/use-modal'
 import { apiJson } from '@/lib/axios'
 import { UserInfo } from '@/@types/user-info'
+import { useLoader } from '@/hooks/use-loader'
 
 type Props = DialogProps
 
 export function SignInModal({ children, ...rest }: Props) {
   const { closeSignInModal, openSignUpModal } = useModal()
   const router = useRouter()
+  const { showLoader, hideLoader } = useLoader()
 
   const signInSchema = z.object({
     email: z.string().email(),
@@ -35,6 +37,7 @@ export function SignInModal({ children, ...rest }: Props) {
   })
 
   async function onSubmit({ email, password }: SignIn) {
+    showLoader()
     const { data } = await apiJson.get<UserInfo[]>(
       `/users?email=${email}&password=${password}`,
     )
@@ -46,6 +49,7 @@ export function SignInModal({ children, ...rest }: Props) {
       // todo toaster informando erro
       reset()
     }
+    hideLoader()
   }
 
   function handleChangeModal() {
