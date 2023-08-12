@@ -9,20 +9,25 @@ import { TopCryptos } from '@/components/TopCryptos'
 import { Subscribe } from '@/components/Subscribe'
 import { Footer } from '@/components/Footer'
 import { Banner } from '@/components/Banner'
-import { ModalProvider } from '@/contexts/modalContext'
+import { ModalProvider } from '@/contexts/ModalContext'
+import { MenuContextProvider } from '@/contexts/MenuContext'
+import { MenuAside } from '@/components/MenuAside'
 
 export default function Home() {
   return (
     <ModalProvider>
-      <main>
-        <Header />
-        <Banner />
-        <Image src={WavesPng} alt="" className="waves__image" />
-        <HomeInfos />
-        <TopCryptos />
-        <Subscribe />
-        <Footer />
-      </main>
+      <MenuContextProvider>
+        <main>
+          <Header />
+          <Banner />
+          <Image src={WavesPng} alt="" className="waves__image" />
+          <HomeInfos />
+          <TopCryptos />
+          <Subscribe />
+          <Footer />
+          <MenuAside side="left">Lorem ipsum,</MenuAside>
+        </main>
+      </MenuContextProvider>
     </ModalProvider>
   )
 }

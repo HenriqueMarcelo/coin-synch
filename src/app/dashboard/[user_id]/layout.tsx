@@ -6,7 +6,7 @@ import { ReactNode } from 'react'
 import './layout.scss'
 import { DashboardFooter } from '@/components/DashboardFooter'
 import { useUser } from '@/hooks/use-user'
-import { ModalProvider } from '@/contexts/modalContext'
+import { ModalProvider } from '@/contexts/ModalContext'
 
 type Props = {
   children: ReactNode

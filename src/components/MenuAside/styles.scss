@@ -1,0 +1,49 @@
+.menu-aside {
+    &__overlay {
+        background-color: rgb(93 102 112 / 90%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        opacity: 1;
+        transition: background-color .3s ease, transform 0s ease;
+
+        &--hidden {
+            background-color: rgb(93 102 112 / 0%);
+            transform: translateX(100%);
+            transition: background-color .3s ease 0s, transform 0s ease 1s;
+        }
+
+        &--left {
+            &.menu-aside__overlay--hidden {
+                transform: translateX(-100%);
+            }
+            .menu-aside__nav {
+                right: auto;
+                left: 0;
+                &--hidden {
+                    transform: translateX(-100%); 
+                }
+            }
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        background-color: white;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        transition: all .5s;
+        transform: translateX(0);
+        
+        &--hidden {
+            transform: translateX(100%);
+        }
+
+        
+        
+    }
+}

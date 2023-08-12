@@ -1,3 +1,14 @@
+- [ ] Mobile Menus
+- [ ] Loadings
+- [ ] Select color
+- [ ] Favicon
+- [ ] Header chrome android
+- [ ] Docs
+- [ ] user hook
+- [ ] change API example to Real
+- [ ] API key in .env
+- [ ] Test example
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
