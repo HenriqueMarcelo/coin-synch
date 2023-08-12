@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useCryptos } from './use-cryptos'
 import { apiJson } from '@/lib/axios'
 import { WalletInfo } from '@/@types/wallet-info'
+import { useLoader } from './use-loader'
 
 export type CryptoUser = {
   cryptoName: string
@@ -15,13 +16,17 @@ export type CryptoUser = {
 
 export function useUserWallet(user_id = '1') {
   const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
+  const [isCryptosLoading, setIsCryptoLoading] = useState(true)
   const { cryptos } = useCryptos()
+
+  const { showLoader, hideLoader } = useLoader()
 
   const getUserTable = useCallback(
     async (userId: string) => {
       if (!cryptos.length) {
         return undefined
       }
+      setIsCryptoLoading(true)
       const { data } = await apiJson.get<WalletInfo[]>(
         `/wallets?user_id=${userId}`,
       )
@@ -41,6 +46,7 @@ export function useUserWallet(user_id = '1') {
           })
         }
       }
+      setIsCryptoLoading(false)
 
       return userTable
     },
@@ -53,6 +59,17 @@ export function useUserWallet(user_id = '1') {
     }
     aux()
   }, [getUserTable, user_id])
+
+  useEffect(() => {
+    if (showLoader && hideLoader) {
+      if (isCryptosLoading) {
+        showLoader()
+      } else {
+        hideLoader()
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isCryptosLoading])
 
   return { userTable }
 }

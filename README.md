@@ -5,17 +5,17 @@
 - [x] Favicon
 - [x] Header chrome android
 - [x] Corrigir imagens das cryptos
-- [ ] Loadings
+- [x] Loadings
 - [ ] corrigir tamanho do modal
+- [ ] Levar em conta o usuário certo na hora de buscar o dashboard
 - [ ] tirar delay da api
 - [ ] Docs
-- [ ] user hook
 - [ ] change API example to Real
 - [ ] API key in .env
 - [ ] Test example
 - [ ] Feedback toast
 
-- [ ] Falar sobre criar página 404/SSR/tratamentos de erro
+- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/Skeleton screens/reloads
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

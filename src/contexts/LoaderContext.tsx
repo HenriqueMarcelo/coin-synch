@@ -4,7 +4,7 @@ interface ItemContextType {
   shown: boolean
   showLoader: () => void
   hideLoader: () => void
-  toggle: () => void
+  // toggle: () => void
 }
 
 interface LoaderContextProviderProps {
@@ -16,21 +16,27 @@ export const LoaderContext = createContext({} as ItemContextType)
 export function LoaderContextProvider({
   children,
 }: LoaderContextProviderProps) {
-  const [shown, setShown] = useState(false)
+  // Contador para que um componente não esconda o loader enquanto outro componente não quer;
+  const [auxCount, setAuxCount] = useState(0)
+  const shown = !!auxCount
 
   function showLoader() {
-    setShown(true)
+    // setShown(true)
+    setAuxCount((state) => state + 1)
   }
 
   function hideLoader() {
-    setShown(false)
+    // setShown(false)
+    setAuxCount((state) => state - 1)
   }
 
-  function toggle() {
-    setShown((val) => {
-      return !val
-    })
-  }
+  console.log(auxCount, shown)
+
+  // function toggle() {
+  //   setShown((val) => {
+  //     return !val
+  //   })
+  // }
 
   return (
     <LoaderContext.Provider
@@ -38,7 +44,7 @@ export function LoaderContextProvider({
         shown,
         showLoader,
         hideLoader,
-        toggle,
+        // toggle,
       }}
     >
       {children}

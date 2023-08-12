@@ -40,65 +40,68 @@ export default function Dashboard({ params: { user_id } }: Params) {
 
   const firstCrypto = cryptos[0]
 
-  if (!user || !firstCrypto) {
+  if (!user) {
     return null
   }
 
   return (
     <>
       <div className="container dashboard__row">
-        <div className="dashboard__card dashboard__card--mini dashboard__card--full-tablet">
-          <div className="dashboard__balance">
-            <Image src={BalanceIconSvg} alt="" />
-            <div className="hide__mobile">
-              <h4 className="regular__h4">Balance in US$</h4>
-              <span className="regular__body">(approximately)</span>
+        {firstCrypto && (
+          <>
+            <div className="dashboard__card dashboard__card--mini dashboard__card--full-tablet">
+              <div className="dashboard__balance">
+                <Image src={BalanceIconSvg} alt="" />
+                <div className="hide__mobile">
+                  <h4 className="regular__h4">Balance in US$</h4>
+                  <span className="regular__body">(approximately)</span>
+                </div>
+                <div className="show__mobile">
+                  <h4 className="regular__h4">Balance </h4>
+                  <span className="regular__body">in US$</span>
+                </div>
+              </div>
+              <div className="dashboard__price">{balance}</div>
             </div>
-            <div className="show__mobile">
-              <h4 className="regular__h4">Balance </h4>
-              <span className="regular__body">in US$</span>
+            <div className="dashboard__card dashboard__card--mini">
+              <div className="dashboard__variation">
+                <small className="regular__small">Daily Variation</small>
+                <div className="dashboard__acronym">
+                  <Image
+                    src={firstCrypto.imageUrl}
+                    height={32}
+                    width={32}
+                    alt={firstCrypto.code}
+                  />
+                  {firstCrypto.code}
+                </div>
+                <span className="regular__body">
+                  <Change value={firstCrypto.change} percentage />
+                </span>
+              </div>
+              <Chart history={firstCrypto.history} />
             </div>
-          </div>
-          <div className="dashboard__price">{balance}</div>
-        </div>
 
-        <div className="dashboard__card dashboard__card--mini">
-          <div className="dashboard__variation">
-            <small className="regular__small">Daily Variation</small>
-            <div className="dashboard__acronym">
-              <Image
-                src={firstCrypto.imageUrl}
-                height={32}
-                width={32}
-                alt={firstCrypto.code}
-              />
-              {firstCrypto.code}
+            <div className="dashboard__card dashboard__card--mini">
+              <div className="dashboard__news">
+                <div>
+                  <small className="bold__label">NFT&apos;s NEWS</small>
+                  <p className="regular__small-label">
+                    New ElephantX NFT <br />
+                    to be lauched!
+                  </p>
+                </div>
+                <a
+                  href=""
+                  className="regular__small-label regular__small-label--yellow"
+                >
+                  Read more +
+                </a>
+              </div>
+              <Image src={Eduphants} alt="" height={143} width={143} />
             </div>
-            <span className="regular__body">
-              <Change value={firstCrypto.change} percentage />
-            </span>
-          </div>
-          <Chart history={firstCrypto.history} />
-        </div>
-
-        <div className="dashboard__card dashboard__card--mini">
-          <div className="dashboard__news">
-            <div>
-              <small className="bold__label">NFT&apos;s NEWS</small>
-              <p className="regular__small-label">
-                New ElephantX NFT <br />
-                to be lauched!
-              </p>
-            </div>
-            <a
-              href=""
-              className="regular__small-label regular__small-label--yellow"
-            >
-              Read more +
-            </a>
-          </div>
-          <Image src={Eduphants} alt="" height={143} width={143} />
-        </div>
+          </>
+        )}
       </div>
       <div className="container">
         {size === 'sm' ? <WalletMobile /> : <WalletCard />}
