@@ -12,6 +12,7 @@ import { Select } from '../Select'
 import { useCryptos } from '@/hooks/use-cryptos'
 import { WalletInfo } from '@/@types/wallet-info'
 import { useLoader } from '@/hooks/use-loader'
+import { useUserWallet } from '@/hooks/use-user-wallet'
 
 type Props = DialogProps & {
   userId: string
@@ -23,6 +24,7 @@ export function AddCryptoModal({ children, userId, ...rest }: Props) {
   const { hideLoader, showLoader } = useLoader()
   const { closeAddCryptoModal } = useModal()
   const { cryptos } = useCryptos()
+  const { loadData } = useUserWallet(userId)
 
   const signInSchema = z.object({
     crypto: z.string().nonempty(),
@@ -62,12 +64,13 @@ export function AddCryptoModal({ children, userId, ...rest }: Props) {
         value,
       })
     }
+
+    await loadData()
     reset()
     closeAddCryptoModal()
     hideLoader()
 
-    // todo - recarregar página sem reload
-    location.reload()
+    // todo - usar toaster
   }
 
   return (

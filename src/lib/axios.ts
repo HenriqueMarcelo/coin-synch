@@ -2,7 +2,6 @@ import axios from 'axios'
 
 // todo - emitir erro de falta de .env
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
-console.log('Lib -> ', API_KEY)
 
 export const apiCoin = axios.create({
   baseURL: 'https://rest.coinapi.io/v1',

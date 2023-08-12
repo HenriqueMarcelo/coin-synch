@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useContext, useEffect, useState } from 'react'
 import { useCryptos } from './use-cryptos'
 import { apiJson } from '@/lib/axios'
 import { WalletInfo } from '@/@types/wallet-info'
 import { useLoader } from './use-loader'
+import { WalletContext } from '@/contexts/WalletContext'
 
 export type CryptoUser = {
   cryptoName: string
@@ -15,9 +16,10 @@ export type CryptoUser = {
 }
 
 export function useUserWallet(user_id = '1') {
-  const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
+  // const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
   const [isCryptosLoading, setIsCryptoLoading] = useState(true)
   const { cryptos } = useCryptos()
+  const { setUserTable, userTable } = useContext(WalletContext)
 
   const { showLoader, hideLoader } = useLoader()
 
@@ -53,11 +55,17 @@ export function useUserWallet(user_id = '1') {
     [cryptos],
   )
 
-  useEffect(() => {
-    async function aux() {
-      setUserTable(await getUserTable(user_id))
+  async function loadData() {
+    if (setUserTable) {
+      setUserTable([])
+      const data = await getUserTable(user_id)
+      await setUserTable(data)
     }
-    aux()
+  }
+
+  useEffect(() => {
+    loadData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getUserTable, user_id])
 
   useEffect(() => {
@@ -71,5 +79,5 @@ export function useUserWallet(user_id = '1') {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isCryptosLoading])
 
-  return { userTable }
+  return { userTable, loadData }
 }

@@ -14,24 +14,27 @@ import { MenuHomeMobile } from '@/components/MenuHomeMobile'
 import { ModalProvider } from '@/contexts/ModalContext'
 import { MenuContextProvider } from '@/contexts/MenuContext'
 import { LoaderContextProvider } from '@/contexts/LoaderContext'
+import { WalletContextProvider } from '@/contexts/WalletContext'
 
 export default function Home() {
   return (
     <LoaderContextProvider>
-      <ModalProvider>
-        <MenuContextProvider>
-          <main>
-            <Header />
-            <Banner />
-            <Image src={WavesPng} alt="" className="waves__image" />
-            <HomeInfos />
-            <TopCryptos />
-            <Subscribe />
-            <Footer />
-            <MenuHomeMobile />
-          </main>
-        </MenuContextProvider>
-      </ModalProvider>
+      <WalletContextProvider>
+        <ModalProvider>
+          <MenuContextProvider>
+            <main>
+              <Header />
+              <Banner />
+              <Image src={WavesPng} alt="" className="waves__image" />
+              <HomeInfos />
+              <TopCryptos />
+              <Subscribe />
+              <Footer />
+              <MenuHomeMobile />
+            </main>
+          </MenuContextProvider>
+        </ModalProvider>
+      </WalletContextProvider>
     </LoaderContextProvider>
   )
 }

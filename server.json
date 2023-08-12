@@ -1,28 +1,40 @@
 {
   "wallets": [
     {
-      "user_id": "1",
-      "crypto": "DOT",
-      "value": 5,
-      "id": 1
-    },
-    {
-      "user_id": "2",
-      "crypto": "BTC",
-      "value": 1,
+      "user_id": "3",
+      "crypto": "ETH",
+      "value": 0.000001,
       "id": 2
     },
     {
-      "user_id": "2",
-      "crypto": "DOGE",
-      "value": 1000,
+      "user_id": "3",
+      "crypto": "DOT",
+      "value": 0.000003,
       "id": 3
     },
     {
       "user_id": "3",
-      "crypto": "BTC",
-      "value": 19,
+      "crypto": "LTC",
+      "value": 0.000001,
       "id": 4
+    },
+    {
+      "user_id": "3",
+      "crypto": "USDT",
+      "value": 0.000001,
+      "id": 5
+    },
+    {
+      "user_id": "3",
+      "crypto": "DOGE",
+      "value": 0.000001,
+      "id": 6
+    },
+    {
+      "user_id": "3",
+      "crypto": "TRX",
+      "value": 0.000001,
+      "id": 7
     }
   ],
   "users": [

@@ -10,6 +10,7 @@ import { ModalProvider } from '@/contexts/ModalContext'
 import { MenuContextProvider } from '@/contexts/MenuContext'
 import { MenuDashboardMobile } from '@/components/MenuDashboardMobile'
 import { LoaderContextProvider } from '@/contexts/LoaderContext'
+import { WalletContextProvider } from '@/contexts/WalletContext'
 
 type Props = {
   children: ReactNode
@@ -25,17 +26,19 @@ export default function Layout({ children, params: { user_id } }: Props) {
 
   return (
     <LoaderContextProvider>
-      <ModalProvider>
-        <MenuContextProvider>
-          <DashboardHeader user={user} />
-          <section className="dashboard__container">
-            <Aside />
-            <main className="dashboard__main">{children}</main>
-          </section>
-          <DashboardFooter />
-          <MenuDashboardMobile />
-        </MenuContextProvider>
-      </ModalProvider>
+      <WalletContextProvider>
+        <ModalProvider>
+          <MenuContextProvider>
+            <DashboardHeader user={user} />
+            <section className="dashboard__container">
+              <Aside />
+              <main className="dashboard__main">{children}</main>
+            </section>
+            <DashboardFooter />
+            <MenuDashboardMobile />
+          </MenuContextProvider>
+        </ModalProvider>
+      </WalletContextProvider>
     </LoaderContextProvider>
   )
 }

@@ -11,7 +11,7 @@ import { Select } from '../Select'
 import { WalletInfo } from '@/@types/wallet-info'
 import Image from 'next/image'
 import Image404Png from '@/assets/404.png'
-import { CryptoUser } from '@/hooks/use-user-wallet'
+import { CryptoUser, useUserWallet } from '@/hooks/use-user-wallet'
 import { useLoader } from '@/hooks/use-loader'
 import { useModal } from '@/hooks/use-modal'
 
@@ -30,6 +30,7 @@ export function TransferCryptoModal({
 }: Props) {
   const { hideLoader, showLoader } = useLoader()
   const { closeTransferCryptoModal } = useModal()
+  const { loadData } = useUserWallet(userId)
 
   const signInSchema = z.object({
     transfer: z.enum(['in', 'out', '']),
@@ -80,12 +81,12 @@ export function TransferCryptoModal({
       }
     }
 
+    await loadData()
     reset()
     closeTransferCryptoModal()
     hideLoader()
 
-    // todo - recarregar página sem reload
-    location.reload()
+    // todo - usar toaster
   }
 
   if (!cryptoUser) {
