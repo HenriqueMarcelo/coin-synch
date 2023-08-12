@@ -11,6 +11,18 @@
       "crypto": "ETH",
       "value": 9,
       "id": 2
+    },
+    {
+      "user_id": "2",
+      "crypto": "DAI",
+      "value": 0.01,
+      "id": 3
+    },
+    {
+      "user_id": "2",
+      "crypto": "USDT",
+      "value": 0.000004,
+      "id": 4
     }
   ],
   "users": [

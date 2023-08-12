@@ -17,6 +17,8 @@ type Props = DialogProps & {
   userId: string
 }
 
+const MIN_VALUE = 0.000001
+
 export function AddCryptoModal({ children, userId, ...rest }: Props) {
   const { hideLoader, showLoader } = useLoader()
   const { closeAddCryptoModal } = useModal()
@@ -24,7 +26,7 @@ export function AddCryptoModal({ children, userId, ...rest }: Props) {
 
   const signInSchema = z.object({
     crypto: z.string().nonempty(),
-    value: z.coerce.number().min(0.01),
+    value: z.coerce.number().min(MIN_VALUE),
   })
 
   type SignIn = z.infer<typeof signInSchema>
@@ -95,8 +97,8 @@ export function AddCryptoModal({ children, userId, ...rest }: Props) {
           type="number"
           disabled={isSubmitting}
           error={!!errors.value}
-          min={0.000001}
-          step="0.000001"
+          min={MIN_VALUE}
+          step={MIN_VALUE}
           {...register('value')}
         />
         <span>{errors.value?.message}</span>
