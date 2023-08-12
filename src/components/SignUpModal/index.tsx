@@ -53,8 +53,6 @@ export function SignUpModal({ children, ...rest }: Props) {
     } finally {
       hideLoader()
     }
-
-    // todo toaster de confirmação
   }
 
   function handleChangeModal() {

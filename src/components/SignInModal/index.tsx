@@ -46,7 +46,6 @@ export function SignInModal({ children, ...rest }: Props) {
       const user = data[0]
       router.push(`/dashboard/${user.id}`)
     } else {
-      // todo toaster informando erro
       openToaster('User not found.')
       reset()
       hideLoader()
