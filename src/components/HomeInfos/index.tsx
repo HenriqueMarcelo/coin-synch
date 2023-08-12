@@ -12,7 +12,7 @@ export function HomeInfos() {
   const { openSignUpModal } = useModal()
 
   return (
-    <section className="infos__full">
+    <section className="infos__full" id="about-us">
       <div className="infos__container container">
         <div className="infos__box">
           <div className="infos__row infos__row--top">

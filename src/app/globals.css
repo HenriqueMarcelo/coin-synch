@@ -1,5 +1,4 @@
-@tailwind base;
-/* comentar acima */
+/* @tailwind base; */
 
 @tailwind components;
 @tailwind utilities;
@@ -63,11 +62,7 @@
 
 html,
 body {
-  /* max-width: 100vw;
-  overflow-x: hidden; */
-}
-
-body {
+  scroll-behavior: smooth;
 }
 
 a {

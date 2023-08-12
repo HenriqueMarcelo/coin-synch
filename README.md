@@ -1,15 +1,18 @@
 - [x] Mobile Menus
-- [ ] Corrigir navegação do menu
+- [x] Corrigir navegação do menu
 - [ ] Corrigir overflow do marquee
 - [ ] Loadings
 - [ ] Select color
 - [ ] Favicon
+- [ ] Corrigir imagens das cryptos
 - [ ] Header chrome android
 - [ ] Docs
 - [ ] user hook
 - [ ] change API example to Real
 - [ ] API key in .env
 - [ ] Test example
+
+- [ ] Falar sobre criar página 404
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

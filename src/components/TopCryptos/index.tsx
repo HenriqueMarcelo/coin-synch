@@ -22,7 +22,7 @@ export function TopCryptos() {
   }
 
   return (
-    <section className="top__container container">
+    <section className="top__container container" id="top-cryptos">
       <h1 className="top__title">Top Cryptos</h1>
       <div className="home-table__mobile">
         <AccordionDemo cryptos={cryptosList} />

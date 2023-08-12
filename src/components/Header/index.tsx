@@ -26,10 +26,10 @@ export function Header() {
         <div className="header__left">
           <Image src={HeaderLogoSvg} alt="" />
           <div className="header__links">
-            <a href="" className="header__link">
+            <a href="#about-us" className="header__link">
               About us
             </a>
-            <a href="" className="header__link">
+            <a href="#top-cryptos" className="header__link">
               Top Cryptos
             </a>
           </div>
