@@ -113,7 +113,7 @@
     align-items: center;
     justify-content: center;
 
-    color: var(--text-base, #5D6670);
+    color: var(--text-base);
     line-height: 16px; /* 150% */
 
     text-align: center;
@@ -188,9 +188,7 @@
   }
 
   &__forgot {
-    color: var(--gray-500, #8C8A97);
-    /* Regular/Label-small */
-    font-family: Roboto;
+    color: var(--gray-500);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

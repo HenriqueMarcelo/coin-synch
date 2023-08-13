@@ -55,6 +55,12 @@ export function TransferCryptoModal({
 
   const transferValue = watch('transfer')
 
+  /*
+   * Pega na API a quantidade atual da crypto do usuário
+   * se for uma entrada, o aplicativo soma o valor informado
+   * se for uma saída, o app diminui o valor informado
+   * se o total ficar zero o app exclúi a entrada na API
+   */
   async function onSubmit({ transfer, value }: SignIn) {
     showLoader()
     const { data } = await apiJson.get<WalletInfo[]>(

@@ -73,6 +73,12 @@
       "email": "admin@demo.com",
       "password": "12",
       "id": 5
+    },
+    {
+      "name": "sdas",
+      "email": "teste@teste.teste",
+      "password": "asd",
+      "id": 6
     }
   ],
   "newsletter": [

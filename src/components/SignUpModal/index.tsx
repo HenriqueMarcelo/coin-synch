@@ -26,7 +26,7 @@ export function SignUpModal({ children, ...rest }: Props) {
     })
     .refine((data) => data.password === data.confirm_password, {
       message: "Passwords don't match",
-      path: ['confirm_password'], // path of error
+      path: ['confirm_password'],
     })
 
   type SignUp = z.infer<typeof signUpSchema>

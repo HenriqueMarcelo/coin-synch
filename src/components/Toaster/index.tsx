@@ -9,10 +9,10 @@ type Props = Toast.ToastProps & {
 const Toaster = ({ children, ...rest }: Props) => {
   return (
     <Toast.Provider swipeDirection="right">
-      <Toast.Root className="ToastRoot" {...rest}>
+      <Toast.Root className="toast__root" {...rest}>
         <Toast.Description>{children}</Toast.Description>
       </Toast.Root>
-      <Toast.Viewport className="ToastViewport" />
+      <Toast.Viewport className="toast__viewport" />
     </Toast.Provider>
   )
 }

@@ -46,6 +46,14 @@ export function AddCryptoModal({ children, userId, ...rest }: Props) {
     },
   })
 
+  /*
+   * Verifica se o usuário já possui aquela crypto na carteira
+   * se possuir, ele soma o novo valor com o antigo
+   * se não, ele cria uma nova entrada na API
+   *
+   * após isso, o aplicativo recarrega as informações da tabela
+   * e fecha o Dialog
+   */
   async function onSubmit({ crypto, value }: SignIn) {
     showLoader()
     const { data } = await apiJson.get<WalletInfo[]>(

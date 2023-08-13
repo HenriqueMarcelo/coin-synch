@@ -9,6 +9,10 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   error?: boolean
 }
 
+/*
+ * todo: criar um select customizado
+ * mais parecido com o Figma
+ */
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ Icon, error = false, children, ...rest }, ref) => {
     return (
