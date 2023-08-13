@@ -9,9 +9,9 @@ import { Change } from '../Change'
 
 const AccordionTrigger = React.forwardRef(
   ({ children, ...props }, forwardedRef) => (
-    <Accordion.Header className="AccordionHeader">
+    <Accordion.Header className="accordion__header">
       <Accordion.Trigger
-        className="AccordionTrigger"
+        className="accordion__trigger"
         {...props}
         ref={forwardedRef}
       >
@@ -25,11 +25,11 @@ const AccordionTrigger = React.forwardRef(
 const AccordionContent = React.forwardRef(
   ({ children, ...props }, forwardedRef) => (
     <Accordion.Content
-      className="AccordionContent"
+      className="accordion__content"
       {...props}
       ref={forwardedRef}
     >
-      <div className="AccordionContentText">{children}</div>
+      <div className="accordion__content-text">{children}</div>
     </Accordion.Content>
   ),
 )
@@ -38,10 +38,10 @@ AccordionTrigger.displayName = 'AccordionTrigger'
 AccordionContent.displayName = 'AccordionContent'
 
 export const AccordionDemo = ({ cryptos }) => (
-  <Accordion.Root className="AccordionRoot" collapsible>
+  <Accordion.Root className="accordion__root" collapsible>
     {cryptos.map((crypto) => (
       <Accordion.Item
-        className="AccordionItem"
+        className="accordion__item"
         value={crypto.code}
         key={crypto.code}
       >

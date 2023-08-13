@@ -4,8 +4,8 @@
         min-height: calc(100vh - 64px);
         width: 80px;
 
-        border-top: 1px solid var(--secondary-300, #E0DEEA);
-        border-bottom: 1px solid var(--secondary-300, #E0DEEA);
+        border-top: 1px solid var(--gray-300);
+        border-bottom: 1px solid var(--gray-300);
         
         @media (max-width: 1248px) {
             display: none;
