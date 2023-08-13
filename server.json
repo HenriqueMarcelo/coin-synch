@@ -1,109 +1,12 @@
 {
   "wallets": [
-    {
-      "user_id": "3",
-      "crypto": "ETH",
-      "value": 0.000001,
-      "id": 2
-    },
-    {
-      "user_id": "3",
-      "crypto": "DOT",
-      "value": 0.000003,
-      "id": 3
-    },
-    {
-      "user_id": "3",
-      "crypto": "LTC",
-      "value": 0.000001,
-      "id": 4
-    },
-    {
-      "user_id": "3",
-      "crypto": "USDT",
-      "value": 0.000001,
-      "id": 5
-    },
-    {
-      "user_id": "3",
-      "crypto": "DOGE",
-      "value": 0.000001,
-      "id": 6
-    },
-    {
-      "user_id": "3",
-      "crypto": "TRX",
-      "value": 0.000001,
-      "id": 7
-    },
-    {
-      "user_id": "1",
-      "crypto": "ETH",
-      "value": 0.000004,
-      "id": 8
-    },
-    {
-      "user_id": "1",
-      "crypto": "DAI",
-      "value": 0.000004,
-      "id": 9
-    }
+
   ],
   "users": [
-    {
-      "name": "Marcelo Fonseca",
-      "email": "teste@teste.com",
-      "password": "123",
-      "id": 1
-    },
-    {
-      "name": "Marcelo",
-      "email": "admin@demo.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "name": "Marcelo",
-      "email": "marcelo.fonseca@digital2b.com.br",
-      "password": "2@9WSFEjgak5y",
-      "id": 3
-    },
-    {
-      "name": "Marcelo",
-      "email": "admin@demo.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "name": "Marcelo Henrique",
-      "email": "admin@demo.com",
-      "password": "12",
-      "id": 5
-    },
-    {
-      "name": "sdas",
-      "email": "teste@teste.teste",
-      "password": "asd",
-      "id": 6
-    }
+
   ],
   "newsletter": [
-    {
-      "email": "teste@teste.com",
-      "id": 1
-    },
-    {
-      "email": "teste@dtopublicidade.com.br",
-      "id": 2
-    },
-    {
-      "email": "teste@dtopublicidade.com.br",
-      "id": 3
-    },
-    {
-      "email": "teste@dtopublicidade.com.br",
-      "id": 4
-    }
+    
   ],
   "top-cryptos": [
     "BTC",
