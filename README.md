@@ -1,54 +1,86 @@
-- [x] Mobile Menus
-- [x] Corrigir navegação do menu
-- [x] Corrigir overflow do marquee
-- [x] Select color
-- [x] Favicon
-- [x] Header chrome android
-- [x] Corrigir imagens das cryptos
-- [x] Loadings
-- [x] corrigir tamanho do modal
-- [x] Levar em conta o usuário certo na hora de buscar o dashboard
-- [x] API key in .env
-- [x] tirar delay da api
-- [x] change API example to Real
-- [ ] usuário login feadback
+# Desafio - CoinSynch
 
-- [ ] Docs
-- [ ] Falar sobre criar página 404/SSR/tratamentos de erro/
-Skeleton screens/reloads/tests/toast/banner slider/api sem endpoits/
-troca de modal/
+## Instalação e Execução do Projeto 🏗️
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+1. Clone o repositório:
+   ```
+   git clone https://github.com/seu-usuario/coinsynch.git
+   ```
 
-## Getting Started
+2. Navegue para o diretório do projeto:
+   ```
+   cd coinsynch
+   ```
 
-First, run the development server:
+3. Instale as dependências:
+   ```
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+4. Copie o arquivo `.env.local.example` para `.env.local` e insira a chave da CoinAPI.io:
+   ```
+   cp .env.local.example .env.local
+   ```
+   Coloque sua chave da API na variável `NEXT_PUBLIC_API_KEY` no arquivo `.env.local`. Caso não possua uma chave, utilize a chave de exemplo: "15D675AC-4887-4157-9037-3D8E175454C9".
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Inicie o servidor da API json-server:
+   ```
+   npm run dev-server
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+6. Inicie o servidor de desenvolvimento do projeto:
+   ```
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+7. Acesse o projeto no navegador:
+   ```
+   http://localhost:3000
+   ```
+   
+### Troubleshooting
 
-## Learn More
+Caso a api da coinapi.io apresente algum tipo de problema, deixa a variável `NEXT_PUBLIC_API_KEY` do arquivo `.env.local` vazia. O aplicativo tem um tratamento para essa situação e vai buscar todos os dados do json-server de um endpoint simulado. 
 
-To learn more about Next.js, take a look at the following resources:
+## Observações ☝
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tarefas Principais
+Eu não consegui encontrar na api da coinapi.io os dados de variação das cryptos, por isso eu criei um mock no json-server e li os dados de lá;
+Eu não entendi exatamente como deveria ser o banner de carrossel, eu implementei da forma que interpretei, mas fiquei com dúvida se está aceitável com o que foi pedido;
+Eu também não encontrei no coinapi.io os dados das "Top Cryptos" por isso também criei uma simulação no json-server;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tarefas Bônus
+O projeto foi desenvolvido utilizando a estratégia BEM de CSS. A tecnologia Sass foi utilizada para facilitar a estilização;
+O projeto foi construído utilizando NextJS, porém eu não implementei o SSR;
 
-## Deploy on Vercel
+### Pendências e Melhorias Futuras
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Algumas tarefas e melhorias não puderam ser concluídas devido ao prazo, como:
+- A personalização do `<select>` para ficar mais parecido com o do Figma;
+- Exibir transições suaves entre os Dialogs de SignIn e SignUp;
+- A criação de uma página 404 personalizada;
+- O tratamento melhor de erros da API;
+- Exibir indicadores de loading (skeleton screens);
+- Criação de testes;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tecnologias Utilizadas 🛠️
+
+- React Hook Form
+- Zod
+- Phosphor Icons
+- Radix
+- NextJS
+- Axios
+- ESLint
+- React Chartjs
+- Sass
+- Swiper
+- TypeScript
+- json-server
+- Tailwind
+
+Fique à vontade para explorar o projeto e experimentar as funcionalidades! Qualquer feedback é bem-vindo e agradeço pela oportunidade de participar do processo seletivo! 🙌
+
+---
+
+Feito com ❤️ por Marcelo Henrique - Acesse meu [LinkedIn](https://www.linkedin.com/in/marcelo-henrique-fonseca/), [Portfólio](https://marcelohenrique.dev.br/) e [GitHub](https://github.com/HenriqueMarcelo/).
