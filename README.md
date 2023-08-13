@@ -45,12 +45,12 @@ Caso a api da coinapi.io apresente algum tipo de problema, deixa a variável `NE
 ## Observações ☝
 
 ### Tarefas Principais
-Eu não consegui encontrar na api da coinapi.io os dados de variação das cryptos, por isso eu criei um mock no json-server e li os dados de lá;
-Eu não entendi exatamente como deveria ser o banner de carrossel, eu implementei da forma que interpretei, mas fiquei com dúvida se está aceitável com o que foi pedido;
+Eu não consegui encontrar na api da coinapi.io os dados de variação das cryptos, por isso eu criei um mock no json-server e li os dados de lá;  
+Eu não entendi exatamente como deveria ser o banner de carrossel, eu implementei da forma que interpretei, mas fiquei com dúvida se está aceitável com o que foi pedido;  
 Eu também não encontrei no coinapi.io os dados das "Top Cryptos" por isso também criei uma simulação no json-server;
 
 ### Tarefas Bônus
-O projeto foi desenvolvido utilizando a estratégia BEM de CSS. A tecnologia Sass foi utilizada para facilitar a estilização;
+O projeto foi desenvolvido utilizando a estratégia BEM de CSS. A tecnologia Sass foi utilizada para facilitar a estilização;  
 O projeto foi construído utilizando NextJS, porém eu não implementei o SSR;
 
 ### Pendências e Melhorias Futuras
