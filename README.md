@@ -9,7 +9,7 @@
 
 2. Navegue para o diretório do projeto:
    ```
-   cd coinsynch
+   cd coin-synch
    ```
 
 3. Instale as dependências:
