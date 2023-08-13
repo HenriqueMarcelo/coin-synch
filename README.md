@@ -4,7 +4,7 @@
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/seu-usuario/coinsynch.git
+   git clone https://github.com/HenriqueMarcelo/coin-synch.git
    ```
 
 2. Navegue para o diretório do projeto:
