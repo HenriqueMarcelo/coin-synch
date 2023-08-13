@@ -35,6 +35,12 @@
       "crypto": "TRX",
       "value": 0.000001,
       "id": 7
+    },
+    {
+      "user_id": "1",
+      "crypto": "ETH",
+      "value": 0.000002,
+      "id": 8
     }
   ],
   "users": [

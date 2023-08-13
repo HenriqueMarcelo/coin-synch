@@ -90,13 +90,3 @@ button {
 button[disabled] {
   cursor: not-allowed;
 }
-
-.container:nth-child(1) {
-  /* background: lightblue; */
-}
-.container:nth-child(2) {
-  /* background: lightgreen; */
-}
-.container:nth-child(3) {
-  /* background: lightcoral; */
-}

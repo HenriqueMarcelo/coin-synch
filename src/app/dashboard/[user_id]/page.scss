@@ -140,12 +140,9 @@
         }
     }
     &__title {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
         text-align: center;
-        /* Bold / H4 */
-        font-family: Roboto;
         font-size: 24px;
-        font-style: normal;
         font-weight: 700;
         line-height: 32px; /* 133.333% */
 
@@ -170,12 +167,10 @@
         gap: 8px;
         
         border-radius: 32px;
-        background: var(--yellow-500, #FBAB34);
+        background: var(--yellow-500);
 
         color: #FFF;
         text-align: center;
-        /* Regular/label */
-        font-family: Roboto;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -210,10 +205,8 @@
         }
     }
     &__title {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
         text-align: center;
-        /* Bold/H5 */
-        font-family: Roboto;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -228,7 +221,7 @@
         }
     }
     &__text {
-        color: var(--text-base, #5D6670);
+        color: var(--text-base);
         text-align: center;
         font-size: 14px;
         font-weight: 400;
@@ -249,10 +242,8 @@
     }
 
     &__th {
-        color: var(--gray-500, #8C8A97);
+        color: var(--gray-500);
         text-align: left;
-        /* Regular/label */
-        font-family: Roboto;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -262,9 +253,7 @@
     }
 
     &__td {
-        color: var(--text-base, #5D6670);
-        /* Regular/body */
-        font-family: Roboto;
+        color: var(--text-base);
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -273,10 +262,10 @@
         padding: 0 24px;
 
         &--green {
-            color: var(--green-700, #149E55);
+            color: var(--green-700);
         }
         &--red {
-            color: var(--red-700, #149E55);
+            color: var(--red-700);
         }
     }
 
@@ -312,9 +301,7 @@
     }
 
     &__down {
-        color: var(--yellow-500, #FBAB34);
-        /* Regular/small-label */
-        font-family: Roboto;
+        color: var(--yellow-500);
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -341,14 +328,14 @@
         }
     }
     &__body {
-        color: var(--gray-500, #8C8A97);
+        color: var(--gray-500);
         text-align: center;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
 
         &--green {
-            color: var(--green-700, #149E55);
+            color: var(--green-700);
         }
 
         @media (max-width: 1248px) {
@@ -357,10 +344,8 @@
         }
     }
     &__small {
-        color: var(--gray-500, #8C8A97);
+        color: var(--gray-500);
         
-        /* Regular/small-label */
-        font-family: Roboto;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;

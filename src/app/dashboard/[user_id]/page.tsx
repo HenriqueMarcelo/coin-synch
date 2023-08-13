@@ -29,11 +29,19 @@ export default function Dashboard({ params: { user_id } }: Params) {
   const { userTable } = useUserWallet(user_id)
   const { setUserId } = useModal()
 
+  /*
+   * Diz qual é o usuário que será
+   * utilizado dentro dos Dialogs
+   */
   useEffect(() => {
     setUserId(user_id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user_id])
 
+  /*
+   * Calcula o balanço geral com base na carteira do usuário,
+   * formata para USD utilizando o hook useMemo()
+   */
   const balance = useMemo(() => {
     const total = userTable?.reduce((accumulator, currentValue) => {
       return accumulator + currentValue.value
