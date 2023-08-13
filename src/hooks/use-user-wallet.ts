@@ -15,7 +15,7 @@ export type CryptoUser = {
   amount: number
 }
 
-export function useUserWallet(user_id = '1') {
+export function useUserWallet(user_id: string) {
   // const [userTable, setUserTable] = useState<CryptoUser[] | undefined>()
   const [isCryptosLoading, setIsCryptoLoading] = useState(true)
   const { cryptos } = useCryptos()
@@ -23,6 +23,11 @@ export function useUserWallet(user_id = '1') {
 
   const { showLoader, hideLoader } = useLoader()
 
+  /*
+   * cruza as informações da carteira do usuário
+   * com os valores atuais das moedas vindas da API
+   * e retorna os dados necessários para a interface gráfica.
+   */
   const getUserTable = useCallback(
     async (userId: string) => {
       if (!cryptos.length) {

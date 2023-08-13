@@ -6,11 +6,11 @@ import './styles.scss'
 import { CaretDown, List } from '@phosphor-icons/react'
 import { MyPopover } from '../MyPopover'
 import { UserInfo } from '@/@types/user-info'
-import { getFirstAndLastWords } from '@/utils/get-frist-and-last-words'
 import { useWidth } from '@/hooks/use-width'
 import { useMenu } from '@/hooks/use-menu'
 import { LoaderLine } from '../LoaderLine'
 import { useLoader } from '@/hooks/use-loader'
+import { getFirstAndLastWords } from '@/utils/get-first-and-last-words'
 
 type Props = {
   user: UserInfo

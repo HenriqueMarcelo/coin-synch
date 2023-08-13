@@ -17,6 +17,11 @@ type CryptoDataAPI = {
 
 export async function getCryptos() {
   let topCryptosData
+  /*
+   * Verifica se existe o valor no arquivo .env
+   * se existir, faz as requisições para a API real
+   * se não, faz as requisições para a API mock do Json-server
+   */
   if (process.env.NEXT_PUBLIC_API_KEY) {
     const topCryptos = await apiJson.get<string[]>('top-cryptos')
     topCryptosData = await apiCoin.get<CryptoDataAPI[]>(

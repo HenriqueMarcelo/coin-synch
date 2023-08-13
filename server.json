@@ -39,8 +39,14 @@
     {
       "user_id": "1",
       "crypto": "ETH",
-      "value": 0.000002,
+      "value": 0.000004,
       "id": 8
+    },
+    {
+      "user_id": "1",
+      "crypto": "DAI",
+      "value": 0.000004,
+      "id": 9
     }
   ],
   "users": [
